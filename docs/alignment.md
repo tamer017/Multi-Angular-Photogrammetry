@@ -21,9 +21,8 @@ Alignment is the process of matching corresponding points across multiple images
   - **Lowest**: Images downscaled by a factor of 16 (fastest, least accurate).
   
   Formula for downscaling:
-  \[
-  \text{Image Size} = \frac{\text{Original Resolution}}{\text{Downscale Factor}}
-  \]
+  
+  $$\text{Image Size} = \frac{\text{Original Resolution}}{\text{Downscale Factor}}$$
 
 - **Key Point Limit**: Maximum feature points detected per image (default is 40,000).
 - **Tie Point Limit**: Maximum tie points retained after filtering (default is 4,000).
@@ -49,19 +48,18 @@ Alignment is the process of matching corresponding points across multiple images
 
 ### **Reprojection Error**
 Reprojection error measures how accurately 3D points project back into the 2D image plane:
-\[
-\text{Reprojection Error} = \sqrt{\frac{1}{N} \sum_{i=1}^N \left( (x_i - \hat{x}_i)^2 + (y_i - \hat{y}_i)^2 \right)}
-\]
+$$\text{Reprojection Error} = \sqrt{\frac{1}{N} \sum_{i=1}^N \left( (x_i - \hat{x}_i)^2 + (y_i - \hat{y}_i)^2 \right)}$$
+
 Where:
-- \( N \): Total number of tie points.
-- \( (x_i, y_i) \): Observed tie point coordinates.
-- \( (\hat{x}_i, \hat{y}_i) \): Reprojected tie point coordinates.
+- $$N$$: Total number of tie points.
+- $$(x_i, y_i)$$: Observed tie point coordinates.
+- $$(\hat{x}_i, \hat{y}_i)$$: Reprojected tie point coordinates.
 
 ### **Tie Points**
 The software matches feature points across images and forms tie points for 3D reconstruction:
-\[
-\text{Tie Points} = \text{Key Points Matched Across Multiple Images}
-\]
+
+$$\text{Tie Points} = \text{Key Points Matched Across Multiple Images}$$
+
 Higher tie point limits improve alignment but increase processing time and memory usage.
 
 ---
