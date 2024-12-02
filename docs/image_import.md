@@ -43,7 +43,7 @@ doc.open("path_to_project/project.psz")
 
 # Add photos to the project
 chunk = doc.addChunk()
-chunk.addPhotos(["/path/to/images/image1.jpg", "/path/to/images/image2.jpg"])
+chunk.addPhotos(["/path/to/images/image1.tif", "/path/to/images/image2.tif"])
 
 # Save the project
 doc.save("path_to_project/updated_project.psz")
