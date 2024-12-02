@@ -83,7 +83,7 @@ The **DLS 2** measures ambient light and sun angle during flights, recording met
 
 Below is an example of the RedEdge-P and DLS 2 mounted on a DJI Matrice 300 UAV:
 
-![Integration Example](https://example.com/path-to-your-image.jpg)
+![Integration Example](../images/matrice300_integration.png)
 
 ---
 
