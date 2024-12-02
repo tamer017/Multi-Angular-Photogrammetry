@@ -1,7 +1,7 @@
 # Camera Details: MicaSense RedEdge-P
 
 ## Overview
-The MicaSense RedEdge-P is a high-resolution multispectral and panchromatic camera system designed for UAV integration. It supports advanced photogrammetry tasks such as vegetation mapping, crop health analysis, and multi-angular data acquisition.
+The **MicaSense RedEdge-P** is a high-resolution multispectral and panchromatic camera system designed for UAV integration. It supports advanced photogrammetry tasks such as vegetation mapping, crop health analysis, and multi-angular data acquisition.
 
 ---
 
@@ -51,11 +51,11 @@ The MicaSense RedEdge-P is a high-resolution multispectral and panchromatic came
 - Recommended overlap for high-quality mosaics: 75% or higher.
 
 ### **Input Voltage Range**
-- 7.0 V - 25.2 V
-- Typical Power Consumption: 7 W (continuous), 10 W (peak).
+- **Voltage:** 7.0 V - 25.2 V
+- **Power Consumption:** 7 W (continuous), 10 W (peak).
 
 ### **Environmental Requirements**
-- Air exchange required to maintain optimal operating temperature.
+- Air exchange is required to maintain optimal operating temperature.
 - Avoid stagnant environments; use ducted airflow for cooling if necessary.
 
 ---
@@ -63,8 +63,7 @@ The MicaSense RedEdge-P is a high-resolution multispectral and panchromatic came
 ## Downwelling Light Sensor (DLS 2)
 
 ### **Purpose**
-- Measures ambient light and sun angle during flights.
-- Records metadata for global lighting corrections in software like Agisoft Metashape.
+The **DLS 2** measures ambient light and sun angle during flights, recording metadata for global lighting corrections in software like Pix4Dmapper and Agisoft Metashape.
 
 ### **Specifications**
 | Property       | Value        |
@@ -76,7 +75,7 @@ The MicaSense RedEdge-P is a high-resolution multispectral and panchromatic came
 
 ### **Installation Notes**
 - Mount at the highest point on the UAV with a clear view of the sky.
-- Avoid interference from other devices like GPS or data transmitters.
+- Avoid interference from devices like GPS or data transmitters.
 
 ---
 
@@ -89,11 +88,11 @@ Below is an example of the RedEdge-P and DLS 2 mounted on a DJI Matrice 300 UAV:
 ---
 
 ## References
-1. MicaSense RedEdge-P Integration Guide (December 2021).
-2. [MicaSense Firmware Updates](https://www.micasense.com/firmware-updates).
-3. [MicaSense API Documentation](http://micasense.github.io/rededge-api/api/http.html).
+1. **MicaSense RedEdge-P Integration Guide (December 2021)**
+2. [MicaSense Firmware Updates](https://www.micasense.com/firmware-updates)
+3. [MicaSense API Documentation](http://micasense.github.io/rededge-api/api/http.html)
 
 ---
 
 ## Notes
-For detailed installation and operation instructions, refer to the official [MicaSense User Guide](https://www.micasense.com/support).
+For detailed installation and operation instructions, refer to the official [MicaSense User Guide](https://www.micasense.com/support). Additional resources for image processing are available at [GitHub](https://github.com/micasense/imageprocessing).
