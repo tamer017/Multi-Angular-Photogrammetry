@@ -152,6 +152,7 @@ function bundle_adjustment(camera_params, sparse_cloud):
     optimized_params = levenberg_marquardt(camera_params, sparse_cloud)
     return optimized_params
 ```
+![image](https://github.com/user-attachments/assets/9cd606b1-c767-4e6c-93e8-581ddbe22f3a)
 
 ---
 
