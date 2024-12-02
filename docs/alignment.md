@@ -2,7 +2,7 @@
 # Alignment
 
 ## Overview
-Alignment is the process of matching corresponding points across multiple images to generate a sparse point cloud. It is a critical step in photogrammetric processing as it defines the foundation for further stages like dense cloud generation, mesh building, and texture mapping.
+Alignment is the process of matching corresponding points across multiple images to generate a sparse point cloud. This critical step establishes the geometry and relative positions of cameras and prepares the data for further photogrammetric processing.
 
 ---
 
@@ -13,66 +13,56 @@ Alignment is the process of matching corresponding points across multiple images
 - Select the desired alignment parameters from the **Align Photos** dialog box.
 
 ### **2. Configure Parameters**
-- **Accuracy**: Controls the downscaling factor applied to images during alignment:
-  - **Highest**: Uses original resolution (slower but more precise).
-  - **High**: Downscales images by 2×.
-  - **Medium**: Downscales images by 4× (faster but less precise).
-  - **Low**: Downscales images by 8×.
-  - **Lowest**: Downscales images by 16× (suitable for very large datasets).
+- **Accuracy**: Controls image resolution used during alignment:
+  - **Highest**: Full-resolution images (most accurate, slowest).
+  - **High**: Images downscaled by a factor of 2 (default for balance).
+  - **Medium**: Images downscaled by a factor of 4.
+  - **Low**: Images downscaled by a factor of 8.
+  - **Lowest**: Images downscaled by a factor of 16 (fastest, least accurate).
   
-  **Formula for downscaling**:
+  Formula for downscaling:
   \[
-  \text{Image Size (pixels)} = \frac{\text{Original Size}}{\text{Downscale Factor}}
+  \text{Image Size} = \frac{\text{Original Resolution}}{\text{Downscale Factor}}
   \]
 
-- **Key Point Limit**: Specifies the maximum number of feature points detected per image:
-  - Default is 40,000.
-  - Increase for detailed datasets or large, textured areas.
-  - Reduce for simpler datasets or low-memory systems.
-
-- **Tie Point Limit**: Specifies the maximum number of tie points retained after filtering:
-  - Default is 4,000.
-  - Higher values improve alignment accuracy but increase computation time.
-
-- **Adaptive Camera Model Fitting**: Optimizes camera parameters during alignment.
-  - Recommended for datasets with variable image quality or EXIF inconsistencies.
+- **Key Point Limit**: Maximum feature points detected per image (default is 40,000).
+- **Tie Point Limit**: Maximum tie points retained after filtering (default is 4,000).
+- **Adaptive Camera Model Fitting**: Enables optimization of camera parameters for varying image quality or EXIF inconsistencies.
 
 ### **3. Run the Alignment**
-- Click **OK** to start the alignment process.
-- Monitor progress in the **Console Pane**.
-- Review the resulting sparse point cloud in the **Model View** window.
+- Click **OK** to initiate alignment.
+- Review the resulting sparse point cloud in the **Model View**.
+- Inspect alignment errors in the **Reference Pane** if GPS data is available.
 
 ---
 
 ## Notes
-- **Overlap**: Ensure at least 60% side overlap and 80% forward overlap in aerial datasets.
-- Misaligned points often result from:
-  - Poor overlap between images.
-  - Low image quality (blurriness, overexposure, noise).
-  - Insufficient key points or incorrect camera calibration.
+- Ensure a minimum of 60% side overlap and 80% forward overlap for aerial datasets.
+- Check for misaligned cameras or sparse point clouds caused by:
+  - Poor image overlap.
+  - Low-quality images (blur, noise, overexposure).
+  - Inadequate key or tie points.
 
 ---
 
-## Formulas
+## Formulas and Metrics
 
-### **Feature Matching**
-Feature matching is based on the **Scale-Invariant Feature Transform (SIFT)** algorithm:
+### **Reprojection Error**
+Reprojection error measures how accurately 3D points project back into the 2D image plane:
 \[
-\text{Similarity} = \frac{\sum (f_1 - \mu_1) (f_2 - \mu_2)}{\sqrt{\sum (f_1 - \mu_1)^2} \sqrt{\sum (f_2 - \mu_2)^2}}
+\text{Reprojection Error} = \sqrt{\frac{1}{N} \sum_{i=1}^N \left( (x_i - \hat{x}_i)^2 + (y_i - \hat{y}_i)^2 \right)}
 \]
 Where:
-- \( f_1, f_2 \): Feature vectors for two images.
-- \( \mu_1, \mu_2 \): Mean of feature vectors.
+- \( N \): Total number of tie points.
+- \( (x_i, y_i) \): Observed tie point coordinates.
+- \( (\hat{x}_i, \hat{y}_i) \): Reprojected tie point coordinates.
 
-### **Alignment Error (Reprojection Error)**
-Alignment quality is measured by reprojection error:
+### **Tie Points**
+The software matches feature points across images and forms tie points for 3D reconstruction:
 \[
-\text{Reprojection Error} = \sqrt{\frac{1}{n} \sum_{i=1}^n \left( p_i - p_i' \right)^2}
+\text{Tie Points} = \text{Key Points Matched Across Multiple Images}
 \]
-Where:
-- \( p_i \): Observed tie point position.
-- \( p_i' \): Reprojected position of the tie point.
-- \( n \): Total number of tie points.
+Higher tie point limits improve alignment but increase processing time and memory usage.
 
 ---
 
@@ -121,10 +111,3 @@ doc.save("path_to_project/aligned_project.psz")
 ## References
 1. [Agisoft Metashape User Manual (Version 2.1)](https://www.agisoft.com/pdf/metashape_2_1_en.pdf).
 2. [Agisoft Metashape Python API Reference (Version 2.1.3)](https://www.agisoft.com/pdf/metashape_python_api_2_1_3.pdf).
-
-
-### Updates
-1. **Formulas**: Added reprojection error and SIFT similarity formulas.
-2. **Configuration Comparison**: Detailed table for understanding trade-offs.
-3. **Python Script**: Provided a practical script for aligning photos programmatically.
-
