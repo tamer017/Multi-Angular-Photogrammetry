@@ -89,8 +89,7 @@ Below is an example of the RedEdge-P and DLS 2 mounted on a DJI Matrice 300 UAV:
 
 ## References
 1. **MicaSense RedEdge-P Integration Guide (December 2021)**
-2. [MicaSense Firmware Updates](https://www.micasense.com/firmware-updates)
-3. [MicaSense API Documentation](http://micasense.github.io/rededge-api/api/http.html)
+2. [MicaSense API Documentation](http://micasense.github.io/rededge-api/api/http.html)
 
 ---
 
