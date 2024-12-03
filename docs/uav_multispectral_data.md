@@ -10,7 +10,6 @@
 6. [Data Preprocessing](#data-preprocessing)
 7. [Applications of UAV Multispectral Data](#applications-of-uav-multispectral-data)
 8. [Challenges and Considerations](#challenges-and-considerations)
-9. [ON Cerco Project: Background and Goals](#on-cerco-project-background-and-goals)
 
 ---
 
@@ -175,33 +174,6 @@ Each flight should include metadata:
 
 3. **Complex Preprocessing**:  
    - Requires specialized software (e.g., Pix4D, Agisoft Metashape) for orthomosaic generation and analysis.
-
----
-
-## ON Cerco Project: Background and Goals
-
-### Background
-The **ON Cerco Project** is a research initiative funded by the German Research Foundation (DFG), hosted by the Institute for Sugar Beet Research and the Stachniss Lab for Photogrammetry & Robotics at the University of Bonn. The project aims to enhance plant disease modeling by leveraging multi-angular UAV data. It focuses on studying plants under pathogen stress, particularly in crops like sugar beet, where the leaves grow upright and rosette-oriented. This innovative approach breaks new ground by capturing **multi-angular reflectance data** from both nad
-
-ir and oblique observation angles.
-
-The inclusion of **oblique angles** allows for a more comprehensive evaluation of the **pathosystem** (pathogen + host + environment), enabling the capture of disease patterns on both the upper and lower leaf surfaces. This comprehensive data acquisition could significantly improve disease quantification models and provide new insights into plant disease dynamics.
-
-### Goal
-- Develop an image processing approach that:
-  - Allows for unbiased radiometric properties.
-  - Extracts spectral data from all available zenith and azimuth angles, enhancing the analysis of plant pathogens.
-
-### Tasks
-1. Understand the difference between spectral signatures from **nadir** (straight-down) and **oblique** (angled) observation angles.
-2. Develop a pre-processing workflow that addresses biases in spectral data.
-3. Extract spectral data from all available observation angles and optimize runtime for processing large datasets (> 1 million rows).
-4. **Optional**: Obtain a UAV license to collect multi-angular data for optimizing current flight patterns in vegetation science.
-
----
-
-## Conclusion
-The **MicaSense RedEdge-P™** camera, together with multi-angular data collection, offers significant advancements in remote sensing for plant pathology. The **ON Cerco Project** is an example of how these technologies are being used to revolutionize plant disease modeling by capturing disease dynamics from multiple angles. The data generated will help improve disease management strategies and enhance agricultural practices.
 
 ---
 
