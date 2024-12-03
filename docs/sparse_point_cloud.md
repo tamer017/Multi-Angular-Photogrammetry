@@ -134,19 +134,6 @@ doc.save("sparse_point_cloud_rededge_p.psz")
 3. **Computational Overheads**:  
    - Bundle adjustment and triangulation can be resource-intensive.  
 
----
-
-## Visual Placeholders  
-
-- **Diagram 1**: Example of a Sparse Point Cloud  
-  *(Placeholder: Add an image showing a sparse point cloud generated from Metashape.)*  
-
-![Sparse Point Cloud Example](../images/sparse_point_cloud_example.png)  
-
-- **Diagram 2**: Parameter Effects  
-  *(Placeholder: Include a diagram or image illustrating how different parameters affect the sparse point cloud density and quality.)*  
-
-![Parameter Effects](../images/parameter_effects_example.png)  
 
 ---
 
