@@ -27,7 +27,7 @@
 12. [**References**](#references)
 ---
 
-## 1Introduction
+## Introduction
 Stereo vision and depth map generation are essential for understanding 3D environments. Disparity refers to the difference in pixel positions between corresponding points in the left and right images of a stereo pair. Semi-Global Matching (SGM) is an advanced stereo matching algorithm that provides accurate disparity maps by minimizing a cost function across multiple scanlines, which considers smoothness constraints and global consistency.
 
 ## 2Disparity Definition
