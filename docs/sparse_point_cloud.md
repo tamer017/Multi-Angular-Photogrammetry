@@ -88,7 +88,6 @@ The **MicaSense RedEdge-P** camera was used in this workflow. Detailed specifica
 - Calculate the 3D coordinates $$\mathbf{P}$$ of tie points:  
 
 $$\mathbf{P} = (\mathbf{A}^T \mathbf{A})^{-1} \mathbf{A}^T \mathbf{b}$$
-
 Where:  
 - $$\mathbf{A}$$: Projection matrix.  
 - $$\mathbf{b}$$: Image coordinates.  
