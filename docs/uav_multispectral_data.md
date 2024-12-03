@@ -70,8 +70,8 @@ The **RedEdge-P™** camera captures data across five spectral bands, as detaile
 | Red Edge           | 717 ± 10                 | Early stress detection in plants                 |
 | Near-Infrared (NIR)| 842 ± 26                 | Vegetation health (NDVI), biomass estimation     |
 
-### Placeholder for Spectral Bands Visualization  
-`![Spectral Bands Visualization](path_to_image/spectral_bands_rededgep.jpg)`
+### MultiSpectral Bands images  
+![image](https://github.com/user-attachments/assets/6b26ff9a-1350-4f88-8e27-ab731a2af368)
 
 ---
 
