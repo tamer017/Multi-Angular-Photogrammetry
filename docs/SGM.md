@@ -1,6 +1,38 @@
 # **Semi-Global Matching (SGM) Algorithm for Disparity and Depth Map Calculation**
 
 ---
+Here is a **Table of Contents** for your document, formatted cleanly:
+
+---
+
+## **Table of Contents**
+
+- [Introduction](#introduction)  
+- [Disparity Definition](#disparity-definition)  
+- [SGM Algorithm Overview](#sgm-algorithm-overview)  
+  - [Cost Computation](#cost-computation)  
+  - [Disparity Estimation](#disparity-estimation)  
+  - [Optimization](#optimization)  
+  - [Disparity Refinement](#disparity-refinement)  
+- [SGM Cost Function](#sgm-cost-function)  
+  - [Matching Cost](#matching-cost)  
+  - [Cost Volume](#cost-volume)  
+- [SGM Algorithm Pseudocode](#sgm-algorithm-pseudocode)  
+- [Optimization with Dynamic Programming](#optimization-with-dynamic-programming)  
+  - [Dynamic Programming along Multiple Directions](#dynamic-programming-along-multiple-directions)  
+  - [Minimizing the Cost Function](#minimizing-the-cost-function)  
+- [Disparity to Depth Conversion](#disparity-to-depth-conversion)  
+  - [Depth Calculation Formula](#depth-calculation-formula)  
+- [Disparity Map Refinement](#disparity-map-refinement)  
+  - [Post-Processing Techniques](#post-processing-techniques)  
+- [Key Concepts in SGM](#key-concepts-in-sgm)  
+  - [Global Optimization](#global-optimization)  
+  - [Penalizing Disparity Changes](#penalizing-disparity-changes)  
+- [Visualizing Disparity and Depth](#visualizing-disparity-and-depth)  
+- [Conclusion](#conclusion)  
+- [References](#references)
+
+---
 
 ## Introduction
 Stereo vision and depth map generation are essential for understanding 3D environments. Disparity refers to the difference in pixel positions between corresponding points in the left and right images of a stereo pair. Semi-Global Matching (SGM) is an advanced stereo matching algorithm that provides accurate disparity maps by minimizing a cost function across multiple scanlines, which considers smoothness constraints and global consistency.
