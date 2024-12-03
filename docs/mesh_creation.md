@@ -26,6 +26,8 @@
 ## Overview
 Agisoft Metashape generates 3D meshes by reconstructing surfaces from dense point clouds. These meshes are used in GIS, 3D visualization, gaming, and heritage preservation. 
 
+![Uploading image.png…]()
+
 ---
 
 ## Steps for Mesh Generation
