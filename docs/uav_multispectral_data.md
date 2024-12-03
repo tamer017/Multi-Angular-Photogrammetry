@@ -4,15 +4,13 @@
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Electromagnetic Signals](#electromagnetic-signals)
-3. [UAV Specifications](#uav-specifications)
-4. [Camera and Sensor System](#camera-and-sensor-system)
-5. [Data Description](#data-description)
-6. [Spectral Bands and Wavelengths](#spectral-bands-and-wavelengths)
-7. [Data Structure](#data-structure)
-8. [Data Preprocessing](#data-preprocessing)
-9. [Applications of UAV Multispectral Data](#applications-of-uav-multispectral-data)
-10. [Challenges and Considerations](#challenges-and-considerations)
-11. [ON Cerco Project: Background and Goals](#on-cerco-project-background-and-goals)
+3. [Camera and Sensor System](#camera-and-sensor-system)
+4. [Spectral Bands and Wavelengths](#spectral-bands-and-wavelengths)
+5. [Data Structure](#data-structure)
+6. [Data Preprocessing](#data-preprocessing)
+7. [Applications of UAV Multispectral Data](#applications-of-uav-multispectral-data)
+8. [Challenges and Considerations](#challenges-and-considerations)
+9. [ON Cerco Project: Background and Goals](#on-cerco-project-background-and-goals)
 
 ---
 
@@ -26,17 +24,10 @@ Electromagnetic (EM) signals are the foundation of remote sensing. They are emit
 
 The **MicaSense RedEdge-P™** camera captures electromagnetic signals across various wavelengths, which allows the differentiation of plant health, disease symptoms, and other environmental factors. In this context, multispectral data is essential for analyzing spectral signatures that reflect stress caused by pathogens, especially when captured from multiple angles.
 
-### Placeholder for Electromagnetic Signals Image  
 ![Integration Example](../images/science-electromagnetic-spectrum-diagram-free-vector.jpg)
 
 ---
 
-## UAV Specifications
-- **Type**: UAV/Drone  
-- **Model**: [Insert UAV Model, e.g., DJI Matrice 300 RTK]  
-- **Payload**: MicaSense RedEdge-P™ with DLS 2  
-
----
 
 ## Camera and Sensor System
 
@@ -55,14 +46,6 @@ The **DLS 2** system measures ambient light conditions during data capture. It:
 - Includes an integrated GPS for geotagging images.
 
 ---
-
-## Data Description
-- **Image Count**: Approximately 500 images per flight.  
-- **Format**: GeoTIFF for spatial metadata preservation or RAW for unprocessed spectral data.  
-- **Resolution**: 12-bit data for each spectral band.  
-- **Flight Parameters**:  
-  - Altitude: Typically 120 meters.  
-  - Overlap: 80% forward and 70% side overlap to ensure complete coverage.  
 
 ### Placeholder for Example Image  
 `![MicaSense Data Example](path_to_image/micasense_data_example.jpg)`
