@@ -47,13 +47,15 @@ The **DLS 2** system measures ambient light conditions during data capture. It:
 
 ---
 
-### Example Image  
-1. ![Image 1](../images/IMG_0200_1.tif?raw=true)
-2. ![Image 2](../images/IMG_0200_2.tif?raw=true)
-3. ![Image 3](../images/IMG_0200_3.tif?raw=true)
-4. ![Image 4](../images/IMG_0200_4.tif?raw=true)
-5. ![Image 5](../images/IMG_0200_5.tif?raw=true)
-6. ![Image 6](../images/IMG_0200_6.tif?raw=true)
+### Example Images
+
+<img src="https://github.com/user-attachments/assets/0aa2f2d8-98df-4747-8da0-5a4b50872cb7" width="150" /> 
+<img src="https://github.com/user-attachments/assets/277f14f9-871b-415e-af87-5ca758ea730c" width="150" /> 
+<img src="https://github.com/user-attachments/assets/af68b0aa-d35d-48cd-9d62-c73b68c0eb0f" width="150" /> 
+<img src="https://github.com/user-attachments/assets/3319d538-5ca8-408b-bf20-a896b9ee8d00" width="150" /> 
+<img src="https://github.com/user-attachments/assets/cc706217-acd2-41d2-923a-347553ae6dfb" width="150" /> 
+<img src="https://github.com/user-attachments/assets/1eb66256-d41e-42b5-940f-a4a975197b27" width="150" />
+
 ---
 
 ## Spectral Bands and Wavelengths
