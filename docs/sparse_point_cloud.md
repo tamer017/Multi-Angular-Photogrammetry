@@ -154,11 +154,9 @@ doc.save("sparse_point_cloud_rededge_p.psz")
 
 ## References  
 
-1. **Agisoft Metashape User Manual, Version 2.1.**  
-2. **Agisoft Metashape Python API Reference, Version 2.1.3.**  
-3. **Camera Details: [GitHub Camera Documentation](https://github.com/tamer017/Multi-Angular-Photogrammetry/blob/master/docs/camera.md).**  
-4. **Alignment Documentation: [GitHub Alignment Guide](https://github.com/tamer017/Multi-Angular-Photogrammetry/blob/master/docs/alignment.md).**  
+1. [Agisoft Metashape User Manual (Version 2.1)](https://www.agisoft.com/pdf/metashape_2_1_en.pdf).
+2. [Agisoft Metashape Python API Reference (Version 2.1.3)](https://www.agisoft.com/pdf/metashape_python_api_2_1_3.pdf). 
+3. [GitHub Camera Documentation](https://github.com/tamer017/Multi-Angular-Photogrammetry/blob/master/docs/camera.md).**
+4.  [GitHub Alignment Guide](https://github.com/tamer017/Multi-Angular-Photogrammetry/blob/master/docs/alignment.md).**  
 
----
 
-Let me know if you'd like me to refine this further or generate custom diagrams for the visual placeholders!
