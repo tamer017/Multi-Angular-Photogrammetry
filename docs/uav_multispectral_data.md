@@ -7,10 +7,9 @@
 3. [Camera and Sensor System](#camera-and-sensor-system)
 4. [Spectral Bands and Wavelengths](#spectral-bands-and-wavelengths)
 5. [Data Structure](#data-structure)
-6. [Data Preprocessing](#data-preprocessing)
-7. [Applications of UAV Multispectral Data](#applications-of-uav-multispectral-data)
-8. [Challenges and Considerations](#challenges-and-considerations)
-9. [References](#references)
+6. [Applications of UAV Multispectral Data](#applications-of-uav-multispectral-data)
+7. [Challenges and Considerations](#challenges-and-considerations)
+8. [References](#references)
    
 
 ---
@@ -125,22 +124,6 @@ Each flight should include metadata:
 - **Flight Altitude**: Ensures reproducibility.  
 - **GPS Coordinates**: Geolocation of each image.  
 
----
-
-## Data Preprocessing
-
-### Steps:
-1. **Noise Reduction**:  
-   - Apply filters to remove sensor and environmental noise (e.g., haze, motion blur).  
-
-2. **Radiometric Calibration**:  
-   - Use DLS 2 data and reflectance panels to normalize reflectance values for consistent lighting.
-
-3. **Geometric Corrections**:  
-   - Correct distortions due to camera tilt or UAV motion.  
-
-4. **Image Stitching**:  
-   - Combine overlapping images into a seamless orthomosaic for analysis.
 
 ---
 
