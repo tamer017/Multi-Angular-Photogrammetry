@@ -1,9 +1,6 @@
 # **Semi-Global Matching (SGM) Algorithm for Disparity and Depth Map Calculation**
 
 ---
-Here is a **Table of Contents** for your document, formatted cleanly:
-
----
 
 ## **Table of Contents**
 
