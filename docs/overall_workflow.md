@@ -2,7 +2,8 @@
 
 ## Table of Contents
 1. [Introduction](#introduction)
-2. [Workflow Steps](#workflow-steps)
+2.  [Workflow Diagram](#workflow-diagram)
+3. [Workflow Steps](#workflow-steps)
    - [Image Import](#1-image-import)
    - [EXIF Data Reading](#2-exif-data-reading)
    - [Image Alignment](#3-image-alignment)
@@ -11,7 +12,6 @@
    - [Mesh Creation](#6-mesh-creation)
    - [Digital Elevation Model (DEM) Generation](#7-digital-elevation-model-dem-generation)
    - [Orthophoto and Orthomosaic Generation](#8-orthophoto-and-orthomosaic-generation)
-3. [Workflow Diagram](#workflow-diagram)
 4. [References](#references)
 
 ---
@@ -19,6 +19,12 @@
 ## Introduction
 
 This document outlines the complete photogrammetry workflow using Agisoft Metashape, detailing each step from input to output and the algorithms used.
+
+---
+
+## Workflow Diagram
+
+![image](https://github.com/user-attachments/assets/e074b40c-6226-4d92-bc87-b66b83d16319)
 
 ---
 
@@ -96,11 +102,6 @@ This document outlines the complete photogrammetry workflow using Agisoft Metash
 
 ---
 
-## Workflow Diagram
-
-![Workflow Diagram](photogrammetry_workflow.png)
-
----
 
 ## References
 1. [Agisoft Metashape User Manual (Version 2.1)](https://www.agisoft.com/pdf/metashape_2_1_en.pdf).
