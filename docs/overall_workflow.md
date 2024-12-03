@@ -18,97 +18,81 @@
 
 ## Introduction
 
-This document outlines the complete photogrammetry workflow using Agisoft Metashape, detailing each step from input to output, algorithms used, and applicable references.
+This document outlines the complete photogrammetry workflow using Agisoft Metashape, detailing each step from input to output and the algorithms used.
 
 ---
 
 ## Workflow Steps
 
 ### 1. Image Import
+- **Description**: This step involves adding digital images into Metashape for processing. The software validates and organizes the input images.
 - **Input**: Digital images in supported formats (JPEG, TIFF, etc.).
 - **Output**: Imported images listed in the Metashape workspace.
 - **Algorithm**: Metadata extraction and validation.
-- **Steps**:
-  1. Add images to the project via the `Workflow > Add Photos` option.
-  2. Review image metadata in the Photos panel.
-- **References**: [Metashape Manual, Chapter 3](13).
+- **Details**: [Image Import Documentation](./image_import.md)
 
 ---
 
 ### 2. EXIF Data Reading
-- **Input**: Metadata from imported images (focal length, sensor size, GPS data).
+- **Description**: Validates and processes metadata embedded in images, such as focal length and GPS coordinates, for camera calibration.
+- **Input**: Metadata from imported images.
 - **Output**: Validated camera parameters for alignment.
 - **Algorithm**: EXIF parsing and initial calibration.
-- **Steps**:
-  1. Extract EXIF data from images.
-  2. Calibrate cameras based on metadata or manual inputs.
-- **References**: [Metashape Manual, Chapter 3](13).
+- **Details**: [EXIF Data Documentation](./exif_data_reading.md)
 
 ---
 
 ### 3. Image Alignment
+- **Description**: Aligns images by detecting features and estimating camera positions, generating a sparse point cloud.
 - **Input**: Imported images with validated metadata.
 - **Output**: Sparse point cloud and initial camera positions.
 - **Algorithm**: SIFT (Scale-Invariant Feature Transform), Bundle Adjustment.
-- **Steps**:
-  1. Align photos using `Workflow > Align Photos`.
-  2. Adjust parameters like accuracy and key point limit.
-- **References**: [Metashape Manual, Chapter 3](13).
+- **Details**: [Image Alignment Documentation](./alignment.md)
 
 ---
 
 ### 4. Sparse Point Cloud Generation
+- **Description**: Creates a 3D representation of the scene by optimizing the alignment results and extracting tie points.
 - **Input**: Aligned images and tie points.
 - **Output**: Sparse 3D point cloud.
 - **Algorithm**: Triangulation and optimization.
-- **Steps**:
-  1. Extract tie points to generate a sparse cloud.
-  2. Optimize the sparse cloud using bundle adjustment.
-- **References**: [Metashape Manual, Chapter 3](13).
+- **Details**: [Sparse Point Cloud Documentation](./sparse_point_cloud.md)
 
 ---
 
 ### 5. Dense Point Cloud Generation
+- **Description**: Enhances the sparse point cloud by adding fine details using dense stereo matching.
 - **Input**: Sparse point cloud and camera positions.
 - **Output**: Dense point cloud with finer details.
 - **Algorithm**: Dense stereo matching.
-- **Steps**:
-  1. Generate depth maps.
-  2. Build the dense cloud using `Workflow > Build Dense Cloud`.
-- **References**: [Metashape Manual, Chapter 3](13).
+- **Details**: [Dense Point Cloud Documentation](./dense_cloud_generation.md)
 
 ---
 
 ### 6. Mesh Creation
+- **Description**: Converts the dense point cloud into a polygonal mesh for a detailed surface representation.
 - **Input**: Dense point cloud or depth maps.
 - **Output**: Polygonal mesh model.
 - **Algorithm**: Surface reconstruction.
-- **Steps**:
-  1. Use `Workflow > Build Mesh`.
-  2. Specify surface type and interpolation parameters.
-- **References**: [Metashape Manual, Chapter 3](13).
+- **Details**: [Mesh Creation Documentation](./mesh_creation.md)
 
 ---
 
 ### 7. Digital Elevation Model (DEM) Generation
+- **Description**: Produces a grid-based elevation model derived from the dense cloud or mesh.
 - **Input**: Dense cloud or mesh.
-- **Output**: Elevation grid (DEM).
+- **Output**: Digital Elevation Model (DEM).
 - **Algorithm**: Interpolation and rasterization.
-- **Steps**:
-  1. Build DEM using `Workflow > Build DEM`.
-  2. Choose the source data and set resolution.
-- **References**: [Metashape Manual, Chapter 3](13).
+- **Details**: [DEM Documentation](./dem.md)
 
 ---
 
 ### 8. Orthophoto and Orthomosaic Generation
+- **Description**: Creates orthorectified images and mosaics corrected for geometric distortions.
 - **Input**: DEM or dense cloud.
-- **Output**: Orthorectified imagery (orthophotos, orthomosaics).
+- **Output**: Orthophotos, Orthomosaics.
 - **Algorithm**: Orthorectification and mosaicking.
-- **Steps**:
-  1. Use `Workflow > Build Orthomosaic`.
-  2. Adjust blending and resolution settings.
-- **References**: [Metashape Manual, Chapter 3](13).
+- **Details**: [Orthophoto Documentation](./orthophoto_generation.md)
 
 ---
 
@@ -119,6 +103,5 @@ This document outlines the complete photogrammetry workflow using Agisoft Metash
 ---
 
 ## References
-1. Agisoft Metashape User Manual - Standard Edition, Version 2.1 [PDF](13).
-2. Agisoft Metashape Python API Reference, Version 2.1.3 [PDF](12).
-
+1. [Agisoft Metashape User Manual](./metashape_user_manual.pdf)
+2. [Agisoft Metashape Python API Reference](./metashape_python_api_reference.pdf)
