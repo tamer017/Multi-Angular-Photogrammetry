@@ -1,5 +1,12 @@
 # Image Import
 
+1. [Overview](#overview)
+2. [Steps](#steps)
+3. [Python Code for Automation](#python-code-for-automation)
+4. [Best Practices](#best-practices)
+5. [Notes](#notes)
+6. [References](#references)
+
 ## Overview
 The first step in processing multi-angular UAV data is importing images into Agisoft Metashape. This process ensures that all source imagery is correctly loaded for alignment and further photogrammetric processing.
 
