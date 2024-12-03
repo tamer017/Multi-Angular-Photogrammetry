@@ -81,29 +81,27 @@ The **RedEdge-P™** camera captures data across five spectral bands, as detaile
 
  Each flight contains six images per channel (one per spectral band, named `IMG_number_1.tif` to `IMG_number_6.tif`).
 
-```
-Certainly! Here's the updated data structure that includes only the `raw_data` for the two flights:
 
 ```
 data/
 │
 ├── flight_1/
-│   ├── raw_data/
-│   │   ├── IMG_0200_1.tif  # Blue channel (475 ± 20 nm)
-│   │   ├── IMG_0200_2.tif  # Green channel (560 ± 20 nm)
-│   │   ├── IMG_0200_3.tif  # Red channel (668 ± 10 nm)
-│   │   ├── IMG_0200_4.tif  # Red Edge channel (717 ± 10 nm)
-│   │   ├── IMG_0200_5.tif  # Near-Infrared channel (842 ± 26 nm)
-│   │   └── IMG_0200_6.tif  # Optional extra image (e.g., reflectance panel or calibration image)
+│    └── raw_data/
+│       ├── IMG_0200_1.tif  # Blue channel (475 ± 20 nm)
+│       ├── IMG_0200_2.tif  # Green channel (560 ± 20 nm)
+│       ├── IMG_0200_3.tif  # Red channel (668 ± 10 nm)
+│       ├── IMG_0200_4.tif  # Red Edge channel (717 ± 10 nm)
+│       ├── IMG_0200_5.tif  # Near-Infrared channel (842 ± 26 nm)
+│       └── IMG_0200_6.tif  # Optional extra image (e.g., reflectance panel or calibration image)
 │
-├── flight_2/
-│   ├── raw_data/
-│   │   ├── IMG_0300_1.tif  # Blue channel (475 ± 20 nm)
-│   │   ├── IMG_0300_2.tif  # Green channel (560 ± 20 nm)
-│   │   ├── IMG_0300_3.tif  # Red channel (668 ± 10 nm)
-│   │   ├── IMG_0300_4.tif  # Red Edge channel (717 ± 10 nm)
-│   │   ├── IMG_0300_5.tif  # Near-Infrared channel (842 ± 26 nm)
-│   │   └── IMG_0300_6.tif  # Optional extra image (e.g., reflectance panel or calibration image)
+└── flight_2/
+     └──raw_data/
+        ├── IMG_0300_1.tif  # Blue channel (475 ± 20 nm)
+        ├── IMG_0300_2.tif  # Green channel (560 ± 20 nm)
+        ├── IMG_0300_3.tif  # Red channel (668 ± 10 nm)
+        ├── IMG_0300_4.tif  # Red Edge channel (717 ± 10 nm)
+        ├── IMG_0300_5.tif  # Near-Infrared channel (842 ± 26 nm)
+        └── IMG_0300_6.tif  # Optional extra image (e.g., reflectance panel or calibration image)
 ```
 
 Each image is named based on the corresponding spectral band:
