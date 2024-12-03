@@ -21,6 +21,7 @@
 
 ## Introduction  
 Dense point cloud generation is a crucial step in photogrammetry workflows, where detailed 3D models are built from sparse point clouds. For details on sparse point cloud generation, refer to the [Sparse Point Cloud Documentation](https://github.com/tamer017/Multi-Angular-Photogrammetry/blob/master/docs/sparse_point_cloud.md).  
+
 ![image](https://github.com/user-attachments/assets/7ef88b54-72ff-4a73-a429-675377bc9d64)
 
 ---
