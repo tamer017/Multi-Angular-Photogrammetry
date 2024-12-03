@@ -87,9 +87,7 @@ The **MicaSense RedEdge-P** camera was used in this workflow. Detailed specifica
 ### Triangulation  
 - Calculate the 3D coordinates $$\mathbf{P}$$ of tie points:  
 
-$$
-\mathbf{P} = (\mathbf{A}^T \mathbf{A})^{-1} \mathbf{A}^T \mathbf{b}
-$$
+$$\mathbf{P} = (\mathbf{A}^T \mathbf{A})^{-1} \mathbf{A}^T \mathbf{b}$$
 
 Where:  
 - $$\mathbf{A}$$: Projection matrix.  
@@ -98,10 +96,7 @@ Where:
 ### Reprojection Error  
 - Minimize reprojection error $$E$$:  
 
-$$
-E = \sum_{i=1}^{N} \| x_i - \hat{x}_i \|^2
-$$  
-
+$$\text{Reprojection Error} = \sqrt{\frac{1}{N} \sum_{i=1}^N \left( (x_i - \hat{x}_i)^2 + (y_i - \hat{y}_i)^2 \right)}$$
 ---
 
 ## Python Code for Sparse Point Cloud Generation  
