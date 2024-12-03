@@ -155,14 +155,18 @@ End
 
 1. **Orthorectification**  
    Orthorectification uses the DEM (or equivalent) to compute corrected pixel locations:
-      $$P' = P \cdot T^{-1}$$
+
+   $$P' = P \cdot T^{-1}$$
+   
    Where:
    - $$P$$: Original pixel coordinates.
    - $$T$$: Transformation matrix accounting for terrain relief and projection.
 
-2. **Blending for Orthomosaics**  
+3. **Blending for Orthomosaics**  
    Combines overlapping images using radiometric weights:
-      $$I_{final}(x, y) = \frac{\sum w_k I_k(x, y)}{\sum w_k}$$
+
+   $$I_{final}(x, y) = \frac{\sum w_k I_k(x, y)}{\sum w_k}$$
+   
    Where:
    - $$I_k(x, y)$$: Intensity value from image $$k$$.  
    - $$w_k$$: Weight for blending based on proximity or angle.
