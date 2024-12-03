@@ -6,7 +6,6 @@
 - [Steps](#steps)
 - [Configuration Parameters Comparison](#configuration-parameters-comparison)
 - [Python Code for Automation](#python-code-for-automation)
-- [Comprehensive Guide to Image Alignment in Agisoft Metashape](#comprehensive-guide-to-image-alignment-in-agisoft-metashape)
 - [Detailed Workflow Explanation](#detailed-workflow-explanation)
 - [Key Best Practices](#key-best-practices)
 - [References](#references)
@@ -83,33 +82,6 @@ chunk.alignCameras()
 # Save the project with updated alignment
 doc.save("path_to_project/aligned_project.psz")
 ```
-### **Comprehensive Guide to Image Alignment in Agisoft Metashape**
-
----
-
-### **Overview**
-The alignment process in Agisoft Metashape is the cornerstone of photogrammetric reconstruction. It involves detecting and matching feature points across overlapping images to create a sparse point cloud and estimate camera positions. This step leverages advanced computer vision and optimization algorithms to ensure precision.
-
----
-
-### **Core Algorithms in Metashape Alignment**
-
-1. **Feature Detection**:
-   - **Algorithm**: Scale-Invariant Feature Transform (SIFT) or optimized equivalent.
-   - **Purpose**: Extract distinctive key points in images that are invariant to scale and rotation.
-
-2. **Feature Matching**:
-   - **Algorithm**: Nearest Neighbor Search using KD-Trees or FLANN (Fast Library for Approximate Nearest Neighbors).
-   - **Purpose**: Identify corresponding features between image pairs.
-
-3. **Bundle Adjustment**:
-   - **Algorithm**: Levenberg-Marquardt optimization.
-   - **Purpose**: Refine camera positions and orientations while minimizing reprojection error.
-
-4. **Camera Model Optimization**:
-   - Adjusts intrinsic and extrinsic parameters using adaptive fitting for improved accuracy with varying image quality.
-
----
 
 ### **Pseudo Code for Alignment Workflow**
 
@@ -205,6 +177,24 @@ function bundle_adjustment(camera_params, sparse_cloud):
 #### 6. **Review and Save Results**:
    - Visualize the sparse point cloud in the Model View.
    - Inspect alignment quality using reprojection error metrics.
+
+---
+### **Core Algorithms in Metashape Alignment**
+
+1. **Feature Detection**:
+   - **Algorithm**: Scale-Invariant Feature Transform (SIFT) or optimized equivalent.
+   - **Purpose**: Extract distinctive key points in images that are invariant to scale and rotation.
+
+2. **Feature Matching**:
+   - **Algorithm**: Nearest Neighbor Search using KD-Trees or FLANN (Fast Library for Approximate Nearest Neighbors).
+   - **Purpose**: Identify corresponding features between image pairs.
+
+3. **Bundle Adjustment**:
+   - **Algorithm**: Levenberg-Marquardt optimization.
+   - **Purpose**: Refine camera positions and orientations while minimizing reprojection error.
+
+4. **Camera Model Optimization**:
+   - Adjusts intrinsic and extrinsic parameters using adaptive fitting for improved accuracy with varying image quality.
 
 ---
 
