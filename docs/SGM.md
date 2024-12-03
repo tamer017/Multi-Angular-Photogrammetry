@@ -64,7 +64,8 @@ Where:
 ### Disparity Estimation
 For each pixel, the algorithm searches for the disparity $$d$$ in the right image that minimizes the cost function. The disparity is calculated by selecting the pixel with the smallest matching cost:
 
-$$d(x, y) = \argmin_{d} \{C(x, y, d)\}$$
+$$d(x, y) = \arg\min_{d} \{C(x, y, d)\}$$
+
 
 ### Optimization
 SGM optimizes the cost function along multiple scanlines or paths in the image. Instead of optimizing locally for each pixel, dynamic programming is used to propagate the cost along rows and other directions. This improves global consistency and reduces errors in low-texture areas.
