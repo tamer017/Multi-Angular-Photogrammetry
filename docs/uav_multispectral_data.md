@@ -27,7 +27,7 @@ Electromagnetic (EM) signals are the foundation of remote sensing. They are emit
 The **MicaSense RedEdge-P™** camera captures electromagnetic signals across various wavelengths, which allows the differentiation of plant health, disease symptoms, and other environmental factors. In this context, multispectral data is essential for analyzing spectral signatures that reflect stress caused by pathogens, especially when captured from multiple angles.
 
 ### Placeholder for Electromagnetic Signals Image  
-`![Electromagnetic Signals Visualization](path_to_image/electromagnetic_signals_placeholder.jpg)`
+![Integration Example](../images/science-electromagnetic-spectrum-diagram-free-vector.jpg)
 
 ---
 
