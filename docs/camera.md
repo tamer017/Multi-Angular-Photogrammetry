@@ -3,22 +3,13 @@
 ## Table of Contents
 1. [Overview](#overview)
 2. [Specifications](#specifications)
-   - [Multispectral Bands](#multispectral-bands)
-   - [Panchromatic Band](#panchromatic-band)
 3. [Physical Dimensions](#physical-dimensions)
-   - [Mounting Information](#mounting-information)
 4. [Operational Features](#operational-features)
-   - [Capture Rate](#capture-rate)
-   - [Input Voltage Range](#input-voltage-range)
-   - [Environmental Requirements](#environmental-requirements)
 5. [Downwelling Light Sensor (DLS 2)](#downwelling-light-sensor-dls-2)
-   - [Purpose](#purpose)
-   - [Specifications](#specifications-1)
-   - [Installation Notes](#installation-notes)
 6. [Integration Example](#integration-example) 
 7. [Notes](#notes)
 8. [References](#references)
-9. 
+  
 ## Overview
 The **MicaSense RedEdge-P** is a high-resolution multispectral and panchromatic camera system designed for UAV integration. It supports advanced photogrammetry tasks such as vegetation mapping, crop health analysis, and multi-angular data acquisition.
 
