@@ -1,5 +1,5 @@
 
-# Sparse Point Cloud Generation in Agisoft Metashape  
+# Sparse Point Cloud Generation
 
 ## Table of Contents  
 1. [Introduction](#introduction)  
