@@ -47,9 +47,13 @@ The **DLS 2** system measures ambient light conditions during data capture. It:
 
 ---
 
-### Placeholder for Example Image  
-`![MicaSense Data Example](path_to_image/micasense_data_example.jpg)`
-
+### Example Image  
+1. ![Image 1](../images/IMG_0200_1.tif?raw=true)
+2. ![Image 2](../images/IMG_0200_2.tif?raw=true)
+3. ![Image 3](../images/IMG_0200_3.tif?raw=true)
+4. ![Image 4](../images/IMG_0200_4.tif?raw=true)
+5. ![Image 5](../images/IMG_0200_5.tif?raw=true)
+6. ![Image 6](../images/IMG_0200_6.tif?raw=true)
 ---
 
 ## Spectral Bands and Wavelengths
