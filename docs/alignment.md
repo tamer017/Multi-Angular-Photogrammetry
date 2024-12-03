@@ -1,6 +1,15 @@
 
 # Alignment
 
+## Table of Contents
+- [Overview](#overview)
+- [Steps](#steps)
+- [Configuration Parameters Comparison](#configuration-parameters-comparison)
+- [Python Code for Automation](#python-code-for-automation)
+- [Comprehensive Guide to Image Alignment in Agisoft Metashape](#comprehensive-guide-to-image-alignment-in-agisoft-metashape)
+- [Detailed Workflow Explanation](#detailed-workflow-explanation)
+- [Key Best Practices](#key-best-practices)
+- [References](#references)
 ## Overview
 Alignment is the process of matching corresponding points across multiple images to generate a sparse point cloud. This critical step establishes the geometry and relative positions of cameras and prepares the data for further photogrammetric processing.
 
