@@ -10,6 +10,8 @@
 6. [Data Preprocessing](#data-preprocessing)
 7. [Applications of UAV Multispectral Data](#applications-of-uav-multispectral-data)
 8. [Challenges and Considerations](#challenges-and-considerations)
+9. [References](#references)
+   
 
 ---
 
@@ -74,51 +76,47 @@ The **RedEdge-P™** camera captures data across five spectral bands, as detaile
 
 ---
 
+
 ## Data Structure
 
-### Suggested Folder Structure
-To organize data collected during flights, the following folder structure is recommended. Each flight contains six images per channel (one per spectral band, named 1-6).
+ Each flight contains six images per channel (one per spectral band, named `IMG_number_1.tif` to `IMG_number_6.tif`).
 
 ```
-project_name/
+data/
 │
 ├── flight_1/
 │   ├── raw_data/
-│   │   ├── 1.tif  # Blue channel
-│   │   ├── 2.tif  # Green channel
-│   │   ├── 3.tif  # Red channel
-│   │   ├── 4.tif  # Red Edge channel
-│   │   ├── 5.tif  # Near-Infrared channel
-│   │   └── 6.tif  # Optional extra image (e.g., reflectance panel or calibration image)
-│   ├── calibration/
-│   │   ├── dls_reading.json
-│   │   └── reflectance_panel.tif
-│   └── metadata.json
+│   │   ├── IMG_0200_1.tif  # Blue channel
+│   │   ├── IMG_0200_2.tif  # Green channel
+│   │   ├── IMG_0200_3.tif  # Red channel
+│   │   ├── IMG_0200_4.tif  # Red Edge channel
+│   │   ├── IMG_0200_5.tif  # Near-Infrared channel
+│   │   └── IMG_0200_6.tif  # Optional extra image (e.g., reflectance panel or calibration image)
+│   
 │
 ├── flight_2/
-│   ├── raw_data/
-│   │   ├── 1.tif
-│   │   ├── 2.tif
-│   │   ├── 3.tif
-│   │   ├── 4.tif
-│   │   ├── 5.tif
-│   │   └── 6.tif
-│   ├── calibration/
-│   │   ├── dls_reading.json
-│   │   └── reflectance_panel.tif
-│   └── metadata.json
-│
-└── examples/
-    └── stitched_mosaic.jpg
+    ├── raw_data/
+    │   ├── IMG_0300_1.tif
+    │   ├── IMG_0300_2.tif
+    │   ├── IMG_0300_3.tif
+    │   ├── IMG_0300_4.tif
+    │   ├── IMG_0300_5.tif
+    │   └── IMG_0300_6.tif
+ 
 ```
 
 Each image is named based on the corresponding spectral band:
-- **1.tif**: Blue channel (475 ± 20 nm)
-- **2.tif**: Green channel (560 ± 20 nm)
-- **3.tif**: Red channel (668 ± 10 nm)
-- **4.tif**: Red Edge channel (717 ± 10 nm)
-- **5.tif**: Near-Infrared channel (842 ± 26 nm)
-- **6.tif**: Optional extra image (e.g., a calibration panel image)
+- **IMG_number_1.tif**: Blue channel (475 ± 20 nm)
+- **IMG_number_2.tif**: Green channel (560 ± 20 nm)
+- **IMG_number_3.tif**: Red channel (668 ± 10 nm)
+- **IMG_number_4.tif**: Red Edge channel (717 ± 10 nm)
+- **IMG_number_5.tif**: Near-Infrared channel (842 ± 26 nm)
+- **IMG_number_6.tif**: Optional extra image (e.g., a calibration panel image)
+
+### Explanation:
+- **IMG_number_1.tif to IMG_number_6.tif**: These are the image files for each spectral band, where `IMG_number` represents a unique identifier for each flight. For example, `IMG_0200_1.tif` represents the Blue channel image from the first flight (ID 0200).
+
+
 
 ### Metadata Fields
 Each flight should include metadata:
@@ -174,10 +172,5 @@ Each flight should include metadata:
 
 3. **Complex Preprocessing**:  
    - Requires specialized software (e.g., Pix4D, Agisoft Metashape) for orthomosaic generation and analysis.
-
----
-
-### Additional Resources
-- [MicaSense RedEdge-P™ Overview](https://www.micasense.com/rededge-p)
-- [Reflectance Calibration Techniques](https://example.com/reflectance-calibration)
-- [NDVI and Vegetation Indices](https://example.com/ndvi-guide)
+## References
+1. [MicaSense API Documentation](http://micasense.github.io/rededge-api/api/http.html)
