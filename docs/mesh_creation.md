@@ -89,7 +89,9 @@ Agisoft Metashape generates 3D meshes by reconstructing surfaces from dense poin
 
 ### Depth Calculation
 Depth is calculated using **epipolar geometry**:
+
    $$d = \frac{f \cdot B}{x_l - x_r}$$
+   
 Where:  
 - $$d$$: Depth  
 - $$f$$: Focal length  
@@ -98,7 +100,9 @@ Where:
 
 ### Triangulation
 Triangulation computes 3D coordinates from 2D image points:
+
    $$P = C + \lambda \cdot R \cdot x$$
+   
 Where:  
 - $$P$$: 3D point coordinates.  
 - $$C$$: Camera center.  
@@ -189,8 +193,8 @@ doc.save("output_project.psz")
 ---
 
 ## References
-1. Agisoft Metashape User Manual (Version 2.1) [6].
-2. Metashape Python API Reference (Version 2.1.3) [7].
+1. [Agisoft Metashape User Manual (Version 2.1)](https://www.agisoft.com/pdf/metashape_2_1_en.pdf).
+2. [Agisoft Metashape Python API Reference (Version 2.1.3)](https://www.agisoft.com/pdf/metashape_python_api_2_1_3.pdf).
 3. Szeliski, R. (2010). *Computer Vision: Algorithms and Applications*. Springer.
 4. Hartley, R., & Zisserman, A. (2003). *Multiple View Geometry in Computer Vision*. Cambridge University Press.
 
