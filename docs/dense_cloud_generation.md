@@ -14,7 +14,7 @@
 7. [Formulas Used](#formulas-used)  
 8. [Python Code for Dense Point Cloud Generation](#python-code-for-dense-point-cloud-generation)  
 9. [Challenges](#challenges)  
-10. [Learn More from Video](#visual-illustrations)  
+10. [Learn More from Video](#learn-more-from-video)  
 11. [References](#references)  
 
 ---
