@@ -103,5 +103,5 @@ This document outlines the complete photogrammetry workflow using Agisoft Metash
 ---
 
 ## References
-1. [Agisoft Metashape User Manual](./metashape_user_manual.pdf)
-2. [Agisoft Metashape Python API Reference](./metashape_python_api_reference.pdf)
+1. [Agisoft Metashape User Manual (Version 2.1)](https://www.agisoft.com/pdf/metashape_2_1_en.pdf).
+2. [Agisoft Metashape Python API Reference (Version 2.1.3)](https://www.agisoft.com/pdf/metashape_python_api_2_1_3.pdf).
