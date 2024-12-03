@@ -85,19 +85,22 @@ The **MicaSense RedEdge-P** camera was used in this workflow. Detailed specifica
 ## Formulas Used  
 
 ### Triangulation  
-- Calculate the 3D coordinates \( \mathbf{P} \) of tie points:  
-\[
+- Calculate the 3D coordinates $$\mathbf{P}$$ of tie points:  
+
+$$
 \mathbf{P} = (\mathbf{A}^T \mathbf{A})^{-1} \mathbf{A}^T \mathbf{b}
-\]  
+$$
+
 Where:  
-- \( \mathbf{A} \): Projection matrix.  
-- \( \mathbf{b} \): Image coordinates.  
+- $$\mathbf{A}$$: Projection matrix.  
+- $$\mathbf{b}$$: Image coordinates.  
 
 ### Reprojection Error  
-- Minimize reprojection error \( E \):  
-\[
+- Minimize reprojection error $$E$$:  
+
+$$
 E = \sum_{i=1}^{N} \| x_i - \hat{x}_i \|^2
-\]  
+$$  
 
 ---
 
@@ -156,7 +159,7 @@ doc.save("sparse_point_cloud_rededge_p.psz")
 
 1. [Agisoft Metashape User Manual (Version 2.1)](https://www.agisoft.com/pdf/metashape_2_1_en.pdf).
 2. [Agisoft Metashape Python API Reference (Version 2.1.3)](https://www.agisoft.com/pdf/metashape_python_api_2_1_3.pdf). 
-3. [GitHub Camera Documentation](https://github.com/tamer017/Multi-Angular-Photogrammetry/blob/master/docs/camera.md).**
-4.  [GitHub Alignment Guide](https://github.com/tamer017/Multi-Angular-Photogrammetry/blob/master/docs/alignment.md).**  
+3. [GitHub Camera Documentation](https://github.com/tamer017/Multi-Angular-Photogrammetry/blob/master/docs/camera.md).
+4.  [GitHub Alignment Guide](https://github.com/tamer017/Multi-Angular-Photogrammetry/blob/master/docs/alignment.md). 
 
 
