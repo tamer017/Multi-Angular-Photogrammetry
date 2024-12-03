@@ -109,13 +109,12 @@ Save the dense point cloud to the project file
 
 ### Depth Map Computation  
 - Each depth map is computed using stereo matching:  
-\[
-\text{Depth}(x, y) = \frac{B \cdot f}{d(x, y)}
-\]  
+   $$\text{Depth}(x, y) = \frac{B \cdot f}{d(x, y)}$$  
+
 Where:  
-- \( B \): Baseline (distance between cameras).  
-- \( f \): Focal length.  
-- \( d(x, y) \): Disparity at pixel \( (x, y) \).  
+- $$B$$: Baseline (distance between cameras).  
+- $$f$$: Focal length.  
+- $$d(x, y)$$: Disparity at pixel $$(x, y)$$.  
 
 ---
 
