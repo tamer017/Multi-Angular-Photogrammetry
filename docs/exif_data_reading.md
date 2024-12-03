@@ -1,6 +1,16 @@
 
 # EXIF Data Reading
 
+## Table of Contents
+1. [Overview](#overview)
+2. [Steps](#steps)
+3. [Python Code for EXIF Data Inspection](#python-code-for-exif-data-inspection)
+4. [Handling Missing EXIF Data](#handling-missing-exif-data)
+   - [1. Manually Input Calibration Parameters](#1-manually-input-calibration-parameters)
+   - [2. Use Reference Data](#2-use-reference-data)
+   - [3. Automate Fallback Parameters](#3-automate-fallback-parameters)
+5. [References](#references)
+
 ## Overview
 EXIF metadata contains crucial information, such as camera parameters (e.g., focal length, pixel size) and GPS coordinates. This information is essential for accurate alignment and reconstruction processes in photogrammetry.
 
