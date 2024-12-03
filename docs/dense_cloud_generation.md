@@ -61,6 +61,7 @@ Metashape employs a combination of advanced computer vision and photogrammetry a
 1. **Stereo Matching**:  
    - Uses **Semi-Global Matching (SGM)** to compute depth maps for overlapping images.  
    - Maximizes pixel correspondence while minimizing energy cost.
+   - refer to [Semi-Global Matching (SGM) Documentation](https://github.com/tamer017/Multi-Angular-Photogrammetry/blob/master/docs/SGM.md) for details.  
 
 2. **Depth Map Fusion**:  
    - Combines individual depth maps into a single unified representation.  
