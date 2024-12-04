@@ -11,8 +11,7 @@ This repository documents workflows and processing steps for multi-angular UAV i
 3. [Documentation](#documentation)  
 4. [Getting Started](#getting-started)  
 5. [Contributing](#contributing)  
-6. [License](#license)  
-7. [Contact](#contact)  
+6. [Contact](#contact)  
 
 ---
 
@@ -109,11 +108,6 @@ We welcome contributions to enhance the repository! Here’s how you can contrib
 
 ---
 
-## License  
-
-This project is distributed under the [MIT License](LICENSE). Feel free to use, modify, and distribute this code in compliance with the license terms.  
-
----
 
 ## Contact  
 
