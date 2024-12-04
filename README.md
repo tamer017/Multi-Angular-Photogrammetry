@@ -84,7 +84,7 @@ To start using this repository:
 
 1. Clone the repository:  
    ```bash  
-   git clone https://github.com/<your-username>/Multi-Angular-Photogrammetry.git  
+   git clone https://github.com/tamer017/Multi-Angular-Photogrammetry.git  
    cd Multi-Angular-Photogrammetry  
    ```  
 2. Explore detailed instructions in the `docs/` directory for each processing step.  
