@@ -89,7 +89,7 @@ This document outlines the complete photogrammetry workflow using Agisoft Metash
 - **Input**: Dense cloud or mesh.
 - **Output**: Digital Elevation Model (DEM).
 - **Algorithm**: Interpolation and rasterization.
-- **Details**: [DEM Documentation](./dem.md)
+- **Details**: [DEM Documentation](./DEM.md)
 
 ---
 
