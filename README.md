@@ -118,8 +118,31 @@ This project is distributed under the [MIT License](LICENSE). Feel free to use, 
 ## Contact  
 
 For questions, feedback, or collaboration, please reach out:  
-- **Ahmed Tamer Assy**  
-- **Supervisor**: Dr. Rene Heim  
+- **Ahmed Tamer Assy**: [ahmed.assy@stud.uni-goettingen.de](mailto:ahmed.assy@stud.uni-goettingen.de)  
+- **Supervisor Dr. Rene Heim**: [heim@ifz-goettingen.de](mailto:heim@ifz-goettingen.de)  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
