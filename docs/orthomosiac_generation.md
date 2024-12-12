@@ -76,7 +76,7 @@ Blending determines how overlapping areas in input rasters are combined:
 ### **Example**
 ![Screenshot 2024-12-11 013853](https://github.com/user-attachments/assets/220ae2ae-3c13-482b-8e50-f3b7bb6d8e78)
 
-For detailed steps, refer to [Orthomosiac Generation](https://github.com/tamer017/Multi-Angular-Photogrammetry/blob/master/docs/dem.md).
+For detailed steps, refer to [Orthomosiac Generation]([https://github.com/tamer017/Multi-Angular-Photogrammetry/blob/master/scripts/orhomosaic_generation.ipynb]).
 
 ---
 #### **Resampling Happens Before Blending**
