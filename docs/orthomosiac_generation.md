@@ -1,5 +1,3 @@
-
-
 ### **Resampling Methods**
 Resampling is applied when resizing or transforming raster data, adjusting how pixel values are interpolated. The script uses:
 
@@ -75,3 +73,8 @@ Blending determines how overlapping areas in input rasters are combined:
    - **Explanation**: The output pixel value represents the number of overlapping layers contributing to that pixel.
 
 ---
+
+![Screenshot 2024-12-11 013853](https://github.com/user-attachments/assets/220ae2ae-3c13-482b-8e50-f3b7bb6d8e78)
+
+#### **Resampling Happens Before Blending**
+Resampling is applied to adjust the resolution or alignment of individual input rasters. If the input rasters are already perfectly aligned and match the target resolution, resampling becomes redundant. The merge process simply applies the blending method to combine the input rasters, leaving the outputs identical.
