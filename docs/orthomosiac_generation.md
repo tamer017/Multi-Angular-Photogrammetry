@@ -1,3 +1,5 @@
+
+
 ### **Resampling Methods**
 Resampling is applied when resizing or transforming raster data, adjusting how pixel values are interpolated. The script uses:
 
