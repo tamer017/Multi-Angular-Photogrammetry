@@ -79,5 +79,6 @@ Blending determines how overlapping areas in input rasters are combined:
 For detailed steps, refer to [Orthomosiac Generation](https://github.com/tamer017/Multi-Angular-Photogrammetry/blob/master/scripts/orhomosaic_generation.ipynb).
 
 ---
-#### **Resampling Happens Before Blending**
+#### **Why all the Resampling have the same output**
+**Resampling Happens Before Blending**
 Resampling is applied to adjust the resolution or alignment of individual input rasters. If the input rasters are already perfectly aligned and match the target resolution, resampling becomes redundant. The merge process simply applies the blending method to combine the input rasters, leaving the outputs identical.
