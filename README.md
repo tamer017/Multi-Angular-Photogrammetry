@@ -1,3 +1,5 @@
+Adding a DOI before switching to public: https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content
+
 ### `README.md`  
 # Multi-Angular Photogrammetry Knowledge Compendium  
 
