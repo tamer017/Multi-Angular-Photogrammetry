@@ -11,6 +11,7 @@ This document provides an in-depth discussion of pixel selection strategies duri
   - [Manual Versus Automated Selection](#manual-versus-automated-selection)
   - [Region-Based Blending Strategies](#region-based-blending-strategies)
 - [Practical Considerations and Literature Support](#practical-considerations-and-literature-support)
+- [Implementation in Agisoft Metashape](#implementation-in-agisoft-metashape)
 - [Summary](#summary)
 - [References](#references)
 
@@ -34,7 +35,7 @@ Modern methods often compute reprojection errors from homography transformations
 
 ### Quality-Based Weighting in Multi-Band Blending
 
-In multi-band blending, as introduced by Burt and Adelson, images are decomposed into different frequency bands. Low-frequency bands, capturing overall brightness and smooth transitions, are weighted according to a distortion measure, while high-frequency bands preserve fine details. Brown and Lowe further refined this approach for panoramic stitching by combining robust feature matching with weighted blending to reduce ghosting and artifacts ([Brown & Lowe, 2007](#ref2)).
+In multi-band blending, as introduced by Burt and Adelson, images are decomposed into different frequency bands. Low-frequency bands, capturing overall brightness and smooth transitions, are weighted according to a distortion measure, while high-frequency bands preserve fine details. Brown and Lowe (2007) further refined this approach for panoramic stitching by combining robust feature matching with weighted blending to reduce ghosting and artifacts ([Brown & Lowe, 2007](#ref2)).
 
 ### Manual Versus Automated Selection
 
@@ -54,10 +55,21 @@ Instead of selecting pixels individually, some algorithms treat overlapping area
   In real-world scenarios, moving objects or changes in illumination can introduce artifacts. Approaches that incorporate temporal analysis—comparing multiple images over time—help select pixels with minimal dynamic interference.
 
 - **Software Implementations:**  
-  Commercial tools such as Agisoft Metashape and Pix4D employ combinations of these methods. For example, Agisoft Metashape’s median orthomosaic blending option is designed to mitigate the impact of outlier pixels, ensuring a consistent blend ([Agisoft Metashape User Manual](#ref6); [Agisoft Forum](#ref7)). Pix4D similarly leverages multi-band blending with robust pixel selection algorithms to produce high-quality outputs.
+  Commercial tools such as Agisoft Metashape and Pix4D employ combinations of these methods. For example, Agisoft Metashape’s median orthomosaic blending option is designed to mitigate the impact of outlier pixels, ensuring a consistent blend ([Agisoft Metashape User Manual](#ref6); [Agisoft Forum](#ref7)). Pix4D similarly leverages multi-band blending with robust pixel selection algorithms to produce high-quality outputs ([3DF Zephyr Tutorials](#ref8)).
 
 - **Future Directions:**  
   Researchers are exploring adaptive algorithms that adjust blending weights dynamically based on local image content, potentially using machine learning techniques to predict the optimal weights. Such advancements could further enhance both the accuracy and efficiency of orthomosaic generation.
+
+## Implementation in Agisoft Metashape
+
+Agisoft Metashape offers several blending modes that address many of the challenges in pixel selection and blending. The available options include:
+
+- **Mosaic Blending:** A default mode that selects pixel values based on a predefined priority, which often yields a sharp mosaic.
+- **Average Blending:** This mode averages the overlapping pixel values, which can reduce the impact of individual outliers.
+- **Max/Min Blending:** These modes choose the highest or lowest pixel value in overlapping areas, respectively.
+- **Median Blending:** Designed to further reduce the influence of outliers (such as glare or transient artifacts), this mode computes the median pixel value across overlaps.
+
+While these options implement strategies similar to multi-band or region-based blending, Agisoft Metashape uses proprietary algorithms behind the scenes. Although not all advanced methods (like fully adaptive multi-resolution blending or explicit region-based weighting) are available as user-configurable options, the software integrates several techniques to optimize the final orthomosaic quality.
 
 ## Summary
 
