@@ -21,8 +21,8 @@ Our evaluation metrics include:
   - [Aggregated Summary](#aggregated-summary)
   - [Conclusion](#conclusion)
 - [Usage](#usage)
-  - [Script Execution](#script-execution)
-  - [Data Samples and Links](#data-samples-and-links)
+  - [Script Execution](#script)
+  - [Data Samples and Links](#data-samples)
 - [References](#references)
 - [License](#license)
 
