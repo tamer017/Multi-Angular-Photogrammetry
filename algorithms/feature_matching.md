@@ -24,7 +24,6 @@ Our evaluation metrics include:
   - [Script Execution](#script)
   - [Data Samples and Links](#data-samples)
 - [References](#references)
-- [License](#license)
 
 ---
 
@@ -168,8 +167,4 @@ The dataset used in this evaluation is the Oxford Buildings dataset (filtered to
 3. Alcantarilla, P. F., Nuevo, J., & Bartoli, A. "Fast explicit diffusion for accelerated features in nonlinear scale spaces." BMVC, 2012.
 4. Brown, M., & Lowe, D. G. "Automatic panoramic image stitching using invariant features." *International Journal of Computer Vision*, 2007.
 
----
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
