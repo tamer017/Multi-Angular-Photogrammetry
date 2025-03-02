@@ -41,16 +41,16 @@ In many computer vision tasks such as panoramic stitching, 3D reconstruction, an
 - **Feature Detector:** An algorithm used to identify salient points (keypoints) in an image. Examples include SIFT, ORB, AKAZE, BRISK, and KAZE.
 - **Descriptor:** A vector that encodes the local appearance around a keypoint.
 - **Matcher:** An algorithm that compares descriptors between images to establish correspondences.
-- **Homography:** A 3×3 matrix \(H\) that maps points from one plane (image) to another, typically used to align two images.
-- **Reprojection Error:** A quantitative measure of alignment accuracy, calculated as the average distance between keypoints in the second image and the projected keypoints from the first image using the homography \(H\).
+- **Homography:** A 3×3 matrix$$H$$ that maps points from one plane (image) to another, typically used to align two images.
+- **Reprojection Error:** A quantitative measure of alignment accuracy, calculated as the average distance between keypoints in the second image and the projected keypoints from the first image using the homography$$H$$.
 
 ### Formula for Reprojection Error
 
-Given \(N\) inlier matches, where \(\mathbf{p}_i\) are keypoints in the first image and \(\mathbf{p}'_i\) are their corresponding points in the second image, the average reprojection error is defined as:
+Given$$N$$ inlier matches, where$$\mathbf{p}_i$$ are keypoints in the first image and$$\mathbf{p}'_i$$ are their corresponding points in the second image, the average reprojection error is defined as:
 
-\[
+$$
 \text{Average Error} = \frac{1}{N} \sum_{i=1}^{N} \left\| \mathbf{p}'_i - H \mathbf{p}_i \right\|
-\]
+$$
 
 ---
 
@@ -97,7 +97,7 @@ Given \(N\) inlier matches, where \(\mathbf{p}_i\) are keypoints in the first im
 
 ### Homography and Reprojection Error
 
-After matching, the keypoint correspondences are used to compute a homography \(H\) using the RANSAC algorithm. The reprojection error, as defined above, quantifies the alignment accuracy.
+After matching, the keypoint correspondences are used to compute a homography$$H$$ using the RANSAC algorithm. The reprojection error, as defined above, quantifies the alignment accuracy.
 
 ### Handling Unknown Overlap
 
