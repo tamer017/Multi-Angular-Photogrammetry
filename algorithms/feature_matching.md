@@ -141,6 +141,9 @@ After processing 131 image pairs (from the `all_souls` series), the aggregated r
 | KAZE     | BF      | 131               | 2.77                             | 585.2                  |
 | KAZE     | FLANN   | 127               | 8.21                             | 38.0                   |
 
+---
+![image](https://github.com/user-attachments/assets/35ead590-684f-4cc1-a223-180d71b26109)
+---
 ### Conclusion
 
 - **BF Matching Outperforms FLANN:**  
