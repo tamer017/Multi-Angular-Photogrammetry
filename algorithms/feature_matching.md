@@ -169,7 +169,7 @@ For images in the `all_souls` series, **BF matching is preferable**. Among the d
 ### Script
 
 The main processing script is available at:  
-[link-to-your-script.py](https://github.com/yourusername/your-repo/blob/main/script.py)
+[feature_matching](https://github.com/tamer017/Multi-Angular-Photogrammetry/blob/master/scripts/feature_matching.ipynb)
 
 ### Data Samples
 
