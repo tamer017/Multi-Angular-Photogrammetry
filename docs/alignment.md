@@ -217,6 +217,7 @@ function bundle_adjustment(camera_params, sparse_cloud):
   - Use predefined lens calibration for fisheye or ultra-wide-angle lenses to improve stability.
 
 ---
+More details about the feature-matching techniques can be found in [feature-matching](https://github.com/tamer017/Multi-Angular-Photogrammetry/blob/master/algorithms/feature_matching.md)
 
 ## References
 1. [Agisoft Metashape User Manual (Version 2.1)](https://www.agisoft.com/pdf/metashape_2_1_en.pdf).
