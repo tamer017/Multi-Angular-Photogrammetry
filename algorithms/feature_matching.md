@@ -55,51 +55,50 @@ $$
 
 ---
 
-
 ## Methodology
 
 ### Feature Detectors
 
 1. **SIFT (Scale-Invariant Feature Transform):**
-   - *Description:* Detects keypoints invariant to scale, rotation, and moderate illumination changes. Based on [Lowe, 2004].
+   - *Description:* Detects keypoints invariant to scale, rotation, and moderate illumination changes. Based on [Lowe, 2004](https://doi.org/10.1023/B:VISI.0000029664.99615.94).
    - *Advantages:* High robustness and repeatability; widely used in many applications.
    - *Disadvantages:* Computationally intensive.
 
 2. **ORB (Oriented FAST and Rotated BRIEF):**
-   - *Description:* Combines the FAST detector with a modified BRIEF descriptor (incorporating orientation) as proposed by [Rublee et al., 2011].
+   - *Description:* Combines the FAST detector with a modified BRIEF descriptor (incorporating orientation) as proposed by [Rublee et al., 2011](https://ieeexplore.ieee.org/document/6126544).
    - *Advantages:* Fast and computationally efficient; free and open-source.
    - *Disadvantages:* May yield fewer or less distinctive matches.
 
 3. **AKAZE:**
-   - *Description:* Utilizes nonlinear diffusion filtering for keypoint detection and computes binary descriptors, introduced in [Alcantarilla et al., 2013].
+   - *Description:* Utilizes nonlinear diffusion filtering for keypoint detection and computes binary descriptors, introduced in [Alcantarilla et al., 2013](https://ieeexplore.ieee.org/document/6620643).
    - *Advantages:* Robust to noise and offers good performance with binary descriptors.
    - *Disadvantages:* Results can be variable across different datasets.
 
 4. **BRISK (Binary Robust Invariant Scalable Keypoints):**
-   - *Description:* Detects keypoints and computes binary descriptors that are invariant to scale and rotation, as detailed in [Leutenegger et al., 2011].
+   - *Description:* Detects keypoints and computes binary descriptors that are invariant to scale and rotation, as detailed in [Leutenegger et al., 2011](https://ieeexplore.ieee.org/document/6126542).
    - *Advantages:* Very high match density and speed.
    - *Disadvantages:* Matching precision can be lower than with methods like SIFT.
 
 5. **KAZE:**
-   - *Description:* Operates in nonlinear scale space to detect keypoints and compute descriptors, similar to AKAZE but without linear approximations [Alcantarilla et al., 2012].
+   - *Description:* Operates in nonlinear scale space to detect keypoints and compute descriptors, similar to AKAZE but without linear approximations [Alcantarilla et al., 2012](https://ieeexplore.ieee.org/document/6460711).
    - *Advantages:* Good balance between match density and alignment accuracy.
    - *Disadvantages:* More computationally expensive than binary methods.
 
 ### Feature Matchers
 
 - **Brute-Force (BF) Matcher:**  
-  - *Description:* Matches each descriptor in one image with all descriptors in another using a cross-check for symmetry. Proposed in [Lowe, 2004].
+  - *Description:* Matches each descriptor in one image with all descriptors in another using a cross-check for symmetry. Proposed in [Lowe, 2004](https://doi.org/10.1023/B:VISI.0000029664.99615.94).
   - *Advantages:* Simple and typically yields a high number of matches.  
   - *Disadvantages:* Slower for very large descriptor sets.
 
 - **FLANN (Fast Library for Approximate Nearest Neighbors):**  
-  - *Description:* Uses an approximate nearest neighbor search combined with Lowe's ratio test to filter matches [Muja and Lowe, 2009].
+  - *Description:* Uses an approximate nearest neighbor search combined with Lowe's ratio test to filter matches [Muja and Lowe, 2009](https://link.springer.com/article/10.1007/s11263-009-0273-4).
   - *Advantages:* Faster than BF on large datasets.  
   - *Disadvantages:* For binary descriptors, FLANN may be overly conservative, sometimes resulting in no valid matches.
 
 ### Homography and Reprojection Error
 
-After matching, the keypoint correspondences are used to compute a homography $$H$$ using the RANSAC algorithm. The reprojection error, as defined above, quantifies the alignment accuracy [Fischler and Bolles, 1981].
+After matching, the keypoint correspondences are used to compute a homography $$H$$ using the RANSAC algorithm. The reprojection error, as defined above, quantifies the alignment accuracy [Fischler and Bolles, 1981](https://doi.org/10.1145/358669.358692).
 
 ### Handling Unknown Overlap
 
