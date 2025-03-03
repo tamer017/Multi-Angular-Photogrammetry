@@ -17,6 +17,8 @@ Our evaluation metrics include:
   - [Feature Matchers](#feature-matchers)
   - [Homography and Reprojection Error](#homography-and-reprojection-error)
   - [Handling Unknown Overlap](#handling-unknown-overlap)
+  - [Preprocessing Steps](#preprocessing-steps)
+  - [Evaluation Strategy](#evaluation-strategy)
 - [Experimental Results](#experimental-results)
   - [Aggregated Summary](#aggregated-summary)
   - [Conclusion](#conclusion)
@@ -53,50 +55,51 @@ $$
 
 ---
 
+
 ## Methodology
 
 ### Feature Detectors
 
-1. **SIFT (Scale-Invariant Feature Transform):**  
-   - *Description:* Detects keypoints invariant to scale, rotation, and moderate illumination changes.  
-   - *Advantages:* High robustness and repeatability; widely used in many applications.  
+1. **SIFT (Scale-Invariant Feature Transform):**
+   - *Description:* Detects keypoints invariant to scale, rotation, and moderate illumination changes. Based on [Lowe, 2004].
+   - *Advantages:* High robustness and repeatability; widely used in many applications.
    - *Disadvantages:* Computationally intensive.
 
-2. **ORB (Oriented FAST and Rotated BRIEF):**  
-   - *Description:* Combines the FAST detector with a modified BRIEF descriptor (incorporating orientation).  
-   - *Advantages:* Fast and computationally efficient; free and open-source.  
+2. **ORB (Oriented FAST and Rotated BRIEF):**
+   - *Description:* Combines the FAST detector with a modified BRIEF descriptor (incorporating orientation) as proposed by [Rublee et al., 2011].
+   - *Advantages:* Fast and computationally efficient; free and open-source.
    - *Disadvantages:* May yield fewer or less distinctive matches.
 
-3. **AKAZE:**  
-   - *Description:* Utilizes nonlinear diffusion filtering for keypoint detection and computes binary descriptors.  
-   - *Advantages:* Robust to noise and offers good performance with binary descriptors.  
+3. **AKAZE:**
+   - *Description:* Utilizes nonlinear diffusion filtering for keypoint detection and computes binary descriptors, introduced in [Alcantarilla et al., 2013].
+   - *Advantages:* Robust to noise and offers good performance with binary descriptors.
    - *Disadvantages:* Results can be variable across different datasets.
 
-4. **BRISK (Binary Robust Invariant Scalable Keypoints):**  
-   - *Description:* Detects keypoints and computes binary descriptors that are invariant to scale and rotation.  
-   - *Advantages:* Very high match density and speed.  
+4. **BRISK (Binary Robust Invariant Scalable Keypoints):**
+   - *Description:* Detects keypoints and computes binary descriptors that are invariant to scale and rotation, as detailed in [Leutenegger et al., 2011].
+   - *Advantages:* Very high match density and speed.
    - *Disadvantages:* Matching precision can be lower than with methods like SIFT.
 
-5. **KAZE:**  
-   - *Description:* Operates in nonlinear scale space to detect keypoints and compute descriptors, similar to AKAZE but without linear approximations.  
-   - *Advantages:* Good balance between match density and alignment accuracy.  
+5. **KAZE:**
+   - *Description:* Operates in nonlinear scale space to detect keypoints and compute descriptors, similar to AKAZE but without linear approximations [Alcantarilla et al., 2012].
+   - *Advantages:* Good balance between match density and alignment accuracy.
    - *Disadvantages:* More computationally expensive than binary methods.
 
 ### Feature Matchers
 
 - **Brute-Force (BF) Matcher:**  
-  - *Description:* Matches each descriptor in one image with all descriptors in another using a cross-check for symmetry.  
+  - *Description:* Matches each descriptor in one image with all descriptors in another using a cross-check for symmetry. Proposed in [Lowe, 2004].
   - *Advantages:* Simple and typically yields a high number of matches.  
   - *Disadvantages:* Slower for very large descriptor sets.
 
 - **FLANN (Fast Library for Approximate Nearest Neighbors):**  
-  - *Description:* Uses an approximate nearest neighbor search combined with Lowe's ratio test to filter matches.  
+  - *Description:* Uses an approximate nearest neighbor search combined with Lowe's ratio test to filter matches [Muja and Lowe, 2009].
   - *Advantages:* Faster than BF on large datasets.  
   - *Disadvantages:* For binary descriptors, FLANN may be overly conservative, sometimes resulting in no valid matches.
 
 ### Homography and Reprojection Error
 
-After matching, the keypoint correspondences are used to compute a homography $$H$$ using the RANSAC algorithm. The reprojection error, as defined above, quantifies the alignment accuracy.
+After matching, the keypoint correspondences are used to compute a homography $$H$$ using the RANSAC algorithm. The reprojection error, as defined above, quantifies the alignment accuracy [Fischler and Bolles, 1981].
 
 ### Handling Unknown Overlap
 
@@ -104,6 +107,19 @@ Since the exact overlap between images is unknown, the evaluation is performed o
 - Determine whether the overlap is sufficient.
 - Filter out pairs with inadequate overlap.
 - Adjust thresholds dynamically based on actual data.
+
+### Preprocessing Steps
+
+Before feature detection, the images undergo preprocessing to enhance robustness:
+- **Grayscale Conversion:** Simplifies processing by reducing the image to a single channel.
+- **Histogram Equalization:** Improves contrast and feature visibility.
+- **Gaussian Blurring:** Reduces noise that could lead to spurious keypoints.
+
+### Evaluation Strategy
+
+- **Dynamic Thresholding:** Adaptively sets match quality thresholds based on initial evaluations.
+- **Cross-Validation:** Uses image pairs with known overlap to validate performance.
+- **Visualization:** Automatically generates match visualizations to qualitatively assess performance.
 
 ---
 
