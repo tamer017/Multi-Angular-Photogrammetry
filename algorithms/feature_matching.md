@@ -1,6 +1,6 @@
 # Feature Matching and Image Alignment Evaluation
 
-This repository provides a comprehensive framework for evaluating various feature detectors and matching algorithms on a subset of the Oxford Buildings dataset. In our experiments, we focus on the `all_souls` image series (ranging from `all_souls_000000.jpg` to `all_souls_000220.jpg`) and compare detectors such as **SIFT**, **ORB**, **AKAZE**, **BRISK**, and **KAZE** using both **Brute-Force (BF)** and **FLANN-based** matchers.
+This repository provides a comprehensive framework for evaluating various feature detectors and matching algorithms on a subset of the UBC IMW2020 dataset. In our experiments, we focus on the **Brandenburg tur images** subset (comprising 100 images) and compare detectors such as **SIFT**, **ORB**, **AKAZE**, **BRISK**, and **KAZE** using both **Brute-Force (BF)** and **FLANN-based** matchers.
 
 Our evaluation metrics include:
 - **Number of Matches:** The number of valid correspondences detected between image pairs.
@@ -19,11 +19,12 @@ Our evaluation metrics include:
   - [Handling Unknown Overlap](#handling-unknown-overlap)
   - [Preprocessing Steps](#preprocessing-steps)
   - [Evaluation Strategy](#evaluation-strategy)
+- [Notebook Experimental Results](#notebook-experimental-results)
 - [Experimental Results](#experimental-results)
-  - [Aggregated Summary](#aggregated-summary)
+  - [Average Results](#average-results)
   - [Conclusion](#conclusion)
 - [Usage](#usage)
-  - [Script Execution](#script)
+  - [Script Execution](#script-execution)
   - [Data Samples and Links](#data-samples)
 - [References](#references)
 
@@ -31,7 +32,7 @@ Our evaluation metrics include:
 
 ## Introduction
 
-In many computer vision tasks such as panoramic stitching, 3D reconstruction, and object recognition, robust feature matching and image alignment are critical. However, when the exact overlap between images is unknown, a dynamic and robust evaluation method is required. This project evaluates several popular feature detectors and matchers on the Oxford Buildings dataset—specifically on the `all_souls` series—to determine the optimal combination for reliable image alignment.
+In many computer vision tasks such as panoramic stitching, 3D reconstruction, and object recognition, robust feature matching and image alignment are critical. However, when the exact overlap between images is unknown, a dynamic and robust evaluation method is required. This project evaluates several popular feature detectors and matchers on a subset of the UBC IMW2020 dataset—specifically, the **Brandenburg tur images** subset (100 images)—to determine the optimal combination for reliable image alignment.
 
 ---
 
@@ -102,7 +103,7 @@ After matching, the keypoint correspondences are used to compute a homography $$
 
 ### Handling Unknown Overlap
 
-Since the exact overlap between images is unknown, the evaluation is performed on every consecutive image pair (filtered by the prefix `all_souls`). By checking the number of matches and reprojection error for each pair, we can:
+Since the exact overlap between images is unknown, the evaluation is performed on every consecutive image pair from the subset. By checking the number of matches and reprojection error for each pair, we can:
 - Determine whether the overlap is sufficient.
 - Filter out pairs with inadequate overlap.
 - Adjust thresholds dynamically based on actual data.
@@ -122,59 +123,76 @@ Before feature detection, the images undergo preprocessing to enhance robustness
 
 ---
 
+## Notebook Experimental Results
+
+The experimental evaluation results presented below are directly obtained from running the `feature_matching.ipynb` notebook. The notebook processes a subset of the UBC IMW2020 dataset—specifically, the **Brandenburg tur images** subset (100 images)—and evaluates the performance of different feature detector–matcher combinations. Key insights from the updated notebook results include:
+
+- **BF matching and FLANN matching provide different trade-offs:**  
+  Depending on the feature detector used, BF and FLANN may produce varying match counts and reprojection errors.
+- **SIFT exhibits relatively high match counts** with both BF and FLANN, but at the cost of higher reprojection errors.
+- **ORB, AKAZE, BRISK, and KAZE show lower match counts overall,** with notable differences between BF and FLANN strategies.
+
+These observations have been integrated into the table and discussion in the next section.
+
+---
+
 ## Experimental Results
 
-### Aggregated Summary
+### Average Results
 
-After processing 131 image pairs (from the `all_souls` series), the aggregated results are:
+The updated average experimental results obtained from the notebook are summarized in the table below:
 
-| Detector | Matcher | # Pairs Processed | Avg. Reprojection Error (pixels) | Avg. Number of Matches |
-|----------|---------|-------------------|----------------------------------|------------------------|
-| SIFT     | BF      | 131               | 8.03                             | 882.4                  |
-| SIFT     | FLANN   | 131               | 18.34                            | 66.4                   |
-| ORB      | BF      | 131               | 14.75                            | 248.2                  |
-| ORB      | FLANN   | 0                 | -                                | -                      |
-| AKAZE    | BF      | 131               | 3.61                             | 669.4                  |
-| AKAZE    | FLANN   | 0                 | -                                | -                      |
-| BRISK    | BF      | 131               | 6.64                             | 1646.4                 |
-| BRISK    | FLANN   | 0                 | -                                | -                      |
-| KAZE     | BF      | 131               | 2.77                             | 585.2                  |
-| KAZE     | FLANN   | 127               | 8.21                             | 38.0                   |
+| Detector | Matcher | Avg. Matches | Avg. Reprojection Error (pixels) |
+|----------|---------|--------------:|---------------------------------:|
+| SIFT     | BF      |       104.84  |                         271.76   |
+| SIFT     | FLANN   |       114.00  |                         388.43   |
+| ORB      | BF      |        10.54  |                         290.86   |
+| ORB      | FLANN   |        11.92  |                         116.28   |
+| AKAZE    | BF      |        22.24  |                         155.79   |
+| AKAZE    | FLANN   |        27.22  |                         312.40   |
+| BRISK    | BF      |        16.70  |                         149.32   |
+| BRISK    | FLANN   |        22.86  |                         244.32   |
+| KAZE     | BF      |        71.88  |                         163.95   |
+| KAZE     | FLANN   |        79.68  |                         251.68   |
+
+*Note:* The differences in performance between BF and FLANN matchers vary with the detector type. For instance, while SIFT shows a modest increase in matches with FLANN, the reprojection error is considerably higher. Conversely, ORB yields a lower error with FLANN despite low match counts.
 
 ---
-![image](https://github.com/user-attachments/assets/35ead590-684f-4cc1-a223-180d71b26109)
----
+
 ### Conclusion
 
-- **BF Matching Outperforms FLANN:**  
-  BF matching produced a significantly higher number of valid matches and lower reprojection errors across all detectors.
+- **BF vs. FLANN:**  
+  The results demonstrate that the choice between BF and FLANN matchers can lead to different trade-offs in terms of the number of matches and the reprojection error. The optimal choice depends on the specific requirements of the application.
   
-- **Best Performing Combinations (with BF):**  
-  - **KAZE with BF**: Lowest average reprojection error (2.77 pixels) with a moderate match count.
-  - **AKAZE with BF**: Low reprojection error (3.61 pixels) with a robust number of matches.
-  - **BRISK with BF**: Very high number of matches, though the error is moderately higher (6.64 pixels).
-  - **SIFT with BF**: High number of matches but higher reprojection error (8.03 pixels).
-  - **ORB with BF**: Fewer matches and higher error, making it less suitable for this dataset.
-  
-- **FLANN Matching Limitations:**  
-  FLANN matching was too conservative for binary descriptors (ORB, AKAZE, BRISK), leading to zero valid pairs. Even for SIFT and KAZE, FLANN produced significantly fewer matches and higher errors.
+- **Detector Observations:**  
+  - **SIFT:** Provides high match counts; however, the associated reprojection errors suggest a trade-off in precision.
+  - **ORB:** Consistently low match counts with BF and FLANN; though FLANN produces a lower error, the overall number of matches is very low.
+  - **AKAZE and BRISK:** Show moderate match counts with relatively low reprojection errors, making them viable candidates when balanced performance is desired.
+  - **KAZE:** Delivers the highest number of matches among binary detectors, with acceptable reprojection error, particularly favoring BF matching.
 
 **Overall Recommendation:**  
-For images in the `all_souls` series, **BF matching is preferable**. Among the detectors, **KAZE and AKAZE with BF matching** provide the best balance between match density and alignment accuracy.
+The choice of detector and matcher should be guided by the specific alignment accuracy and match density required by the application. For high-precision applications, the lower reprojection error of certain FLANN configurations (e.g., ORB) might be desirable, while for robust feature density, BF matching with SIFT, AKAZE, or KAZE may be preferable.
 
 ---
 
 ## Usage
 
-### Script
+### Script Execution
 
 The main processing script is available at:  
 [feature_matching](https://github.com/tamer017/Multi-Angular-Photogrammetry/blob/master/scripts/feature_matching.ipynb)
 
+To reproduce the experiments:
+1. Open `feature_matching.ipynb` in Jupyter Notebook.
+2. Download and extract the dataset from [UBC IMW2020 Data](https://www.cs.ubc.ca/~kmyi/imw2020/data.html).
+3. Use the **Brandenburg tur images** subset (100 images) from the extracted data.
+4. Run all cells to perform feature detection, matching, and evaluation.
+5. Visualizations and updated experimental results will be generated automatically.
+
 ### Data Samples
 
-The dataset used in this evaluation is the Oxford Buildings dataset (filtered to only include images with the prefix `all_souls`). You can download the dataset from:  
-[Oxford Buildings Dataset](http://www.robots.ox.ac.uk/~vgg/data/oxbuildings/oxbuild_images.tgz)
+The dataset used in this evaluation is a subset of the UBC IMW2020 dataset, specifically the **Brandenburg tur images** (100 images). You can download the complete dataset from:  
+[UBC IMW2020 Data](https://www.cs.ubc.ca/~kmyi/imw2020/data.html)
 
 ---
 
@@ -184,5 +202,4 @@ The dataset used in this evaluation is the Oxford Buildings dataset (filtered to
 2. Rublee, E., Rabaud, V., Konolige, K., & Bradski, G. "ORB: an efficient alternative to SIFT or SURF." 2011.
 3. Alcantarilla, P. F., Nuevo, J., & Bartoli, A. "Fast explicit diffusion for accelerated features in nonlinear scale spaces." BMVC, 2012.
 4. Brown, M., & Lowe, D. G. "Automatic panoramic image stitching using invariant features." *International Journal of Computer Vision*, 2007.
-
-
+5. Fischler, M. A., & Bolles, R. C. "Random sample consensus: a paradigm for model fitting with applications to image analysis and automated cartography." *Communications of the ACM*, 1981.
