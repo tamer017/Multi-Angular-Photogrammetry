@@ -25,7 +25,7 @@ Our evaluation metrics include:
   - [Conclusion](#conclusion)
 - [Usage](#usage)
   - [Script Execution](#script-execution)
-  - [Data Samples and Links](#data-samples)
+  - [Data Samples and Links](#data-samples-and-links)
 - [References](#references)
 
 ---
@@ -189,10 +189,11 @@ To reproduce the experiments:
 4. Run all cells to perform feature detection, matching, and evaluation.
 5. Visualizations and updated experimental results will be generated automatically.
 
-### Data Samples
+### Data Samples and Links
 
-The dataset used in this evaluation is a subset of the UBC IMW2020 dataset, specifically the **Brandenburg tur images** (100 images). You can download the complete dataset from:  
-[UBC IMW2020 Data](https://www.cs.ubc.ca/~kmyi/imw2020/data.html)
+The dataset used in this evaluation is a subset of the UBC IMW2020 dataset. Specifically, the **Brandenburg tur images** subset (100 images) was used.  
+- Complete dataset: [UBC IMW2020 Data](https://www.cs.ubc.ca/~kmyi/imw2020/data.html)  
+- Brandenburg tur images subset: [Brandenburg tur images subset](https://github.com/tamer017/Multi-Angular-Photogrammetry/tree/master/data/brandenburg_gate_images)
 
 ---
 
