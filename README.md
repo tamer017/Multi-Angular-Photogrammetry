@@ -11,7 +11,6 @@ This repository documents workflows and processing steps for multi-angular UAV i
 5. [Contributing](#contributing)
 6. [Contact](#contact)
 
----
 
 ## Project Overview
 
@@ -26,7 +25,6 @@ This repository documents workflows and processing steps for multi-angular UAV i
   - Transparent alternatives for undocumented workflows.
   - Recommendations for optimizing multi-angular data processing.
 
----
 
 ## Repository Structure
 
@@ -64,7 +62,6 @@ Multi-Angular-Photogrammetry-master
     └── orhomosaic_generation.ipynb
 ```
 
----
 
 ## Documentation
 
@@ -89,7 +86,6 @@ Multi-Angular-Photogrammetry-master
 - **Feature Matching**: [feature_matching.md](algorithms/feature_matching.md) – Discussion on feature matching techniques.
 - **SGM (Semi-Global Matching)**: [SGM.md](algorithms/SGM.md) – Explanation and justification of the SGM algorithm.
 
----
 
 ## Getting Started
 
@@ -105,7 +101,6 @@ To start using this repository:
 3. **Test the workflows:**  
    Use the provided data in the `data/` folder and examples in the `examples/` directory.
 
----
 
 ## Contributing
 
@@ -122,7 +117,6 @@ We welcome contributions to enhance the repository! Here’s how you can contrib
    ```
 4. Push your branch to GitHub and create a pull request.
 
----
 
 ## Contact
 
