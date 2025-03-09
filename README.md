@@ -2,7 +2,6 @@
 
 This repository documents workflows and processing steps for multi-angular UAV image data using **Agisoft Metashape**. Its aim is to establish a **transparent and reproducible framework** for photogrammetry workflows, with a focus on multi-angular data analysis in plant disease studies.
 
----
 
 ## Table of Contents
 1. [Project Overview](#project-overview)
