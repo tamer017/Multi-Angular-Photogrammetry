@@ -1,6 +1,29 @@
-# Multi-Angular Photogrammetry Knowledge Compendium
+# Photogrammetry Knowledge Compendium
 
-This repository documents workflows and processing steps for multi-angular UAV image data using **Agisoft Metashape**. Its aim is to establish a **transparent and reproducible framework** for photogrammetry workflows, with a focus on multi-angular data analysis in plant disease studies.
+This repository serves as a comprehensive resource for documenting and standardizing the workflows and processing steps involved in UAV-based photogrammetry using **Agisoft Metashape**. It is designed to offer a transparent, reproducible, and detailed guide to photogrammetric processing—from the initial stages of image import and EXIF data handling, through image alignment, point cloud generation, and mesh creation, to the production of orthophotos and digital elevation models (DEMs).
+
+By consolidating and expanding upon the standard procedures found in commercial photogrammetry software, this compendium aims to bridge the gap between proprietary workflows and academic research needs. The repository provides a step-by-step guide that not only clarifies each processing phase but also emphasizes reproducibility and accuracy—key factors for research applications such as plant disease analysis and remote sensing.
+
+**Key Objectives:**
+
+- **Comprehensive Documentation:**  
+  Detailed guides cover every stage of the photogrammetric process, including image pre-processing, data alignment, the creation of sparse and dense point clouds, and the generation of high-quality 3D models.
+
+- **Reproducibility & Transparency:**  
+  By outlining clear, replicable workflows, this compendium addresses common gaps in the official documentation of commercial photogrammetry tools, fostering trust and verification in scientific studies.
+
+- **Optimization Strategies:**  
+  The repository explores alternative processing techniques and algorithms—such as advanced feature matching and Semi-Global Matching (SGM)—that enhance data quality and improve processing efficiency.
+
+- **Research-Driven Applications:**  
+  Special focus is placed on methodologies that have been successfully applied to plant disease studies and other research domains, ensuring that the documented workflows meet rigorous academic and practical standards.
+
+**Note:**  
+This repository is a work in progress. As photogrammetric techniques continue to evolve and new algorithms and processing steps emerge, not every cutting-edge method is currently covered. The steps detailed here represent a robust framework that will be expanded and refined over time. We welcome suggestions, contributions, and additions to help integrate the latest techniques and improve the overall scope of this compendium.
+
+This evolving knowledge compendium is intended to support researchers, students, and professionals alike by providing easy-to-follow instructions, example datasets, and practical scripts. Your feedback and contributions are invaluable in keeping this resource up-to-date and comprehensive.
+
+---
 
 
 ## Table of Contents
@@ -15,7 +38,7 @@ This repository documents workflows and processing steps for multi-angular UAV i
 ## Project Overview
 
 ### Objectives
-- **Document Key Processing Steps**: Provide a detailed guide for all major processes in Agisoft Metashape related to multi-angular UAV data.
+- **Document Key Processing Steps**: Provide a detailed guide for all major processes in Agisoft Metashape related to UAV data.
 - **Address Gaps in Transparency**: Highlight and resolve steps that are under-documented in Metashape’s official materials.
 - **Recommend Alternatives**: Explore and suggest efficient algorithms or workflows.
 
@@ -23,13 +46,12 @@ This repository documents workflows and processing steps for multi-angular UAV i
 - A well-documented repository featuring:
   - Comprehensive guides for Metashape processes.
   - Transparent alternatives for undocumented workflows.
-  - Recommendations for optimizing multi-angular data processing.
 
 
 ## Repository Structure
 
 ```plaintext
-Multi-Angular-Photogrammetry-master
+Photogrammetry-master
 ├── .gitignore
 ├── README.md
 ├── algorithms
