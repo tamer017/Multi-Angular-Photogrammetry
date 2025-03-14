@@ -115,8 +115,8 @@ To start using this repository:
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/tamer017/Multi-Angular-Photogrammetry.git
-   cd Multi-Angular-Photogrammetry-master
+   git clone https://github.com/tamer017/Photogrammetry.git
+   cd Photogrammetry-master
    ```
 2. **Explore the documentation:**  
    Detailed instructions for each processing step are available in the `docs/` directory.
