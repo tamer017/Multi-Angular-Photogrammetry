@@ -1,4 +1,4 @@
-# Photogrammetry Knowledge Compendium
+# Agisoft Photogrammetry Knowledge Compendium
 
 This repository serves as a comprehensive resource for documenting and standardizing the workflows and processing steps involved in UAV-based photogrammetry using **Agisoft Metashape**. It is designed to offer a transparent, reproducible, and detailed guide to photogrammetric processing—from the initial stages of image import and EXIF data handling, through image alignment, point cloud generation, and mesh creation, to the production of orthophotos and digital elevation models (DEMs).
 
@@ -115,8 +115,8 @@ To start using this repository:
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/tamer017/Photogrammetry-Workflow-Compendium.git
-   cd Photogrammetry-Workflow-Compendium-master
+   git clone https://github.com/tamer017/Agisoft-Photogrammetry-Workflow-Compendium.git
+   cd Agisoft-Photogrammetry-Workflow-Compendium-master
    ```
 2. **Explore the documentation:**  
    Detailed instructions for each processing step are available in the `docs/` directory.
